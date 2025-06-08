@@ -11,18 +11,33 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#FAFAFA',
-        primaryAccent: '#18181B',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))'
+        },
+        primaryAccent: 'hsl(var(--primary-accent))',
         brand: '#FF4017',
         background: {
-          DEFAULT: '#111113',
-          secondary: '#27272A'
+          DEFAULT: 'hsl(var(--background))',
+          secondary: 'hsl(var(--background-secondary))'
         },
-        secondary: '#f5f5f5',
-        border: 'rgba(var(--color-border-default))',
-        accent: '#27272A',
-        muted: '#A1A1AA',
-        destructive: '#E53935',
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))'
+        },
+        border: 'hsl(var(--border))',
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))'
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))'
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))'
+        },
         positive: '#22C55E'
       },
       fontFamily: {

@@ -13,11 +13,37 @@ import { toast } from 'sonner'
 import { useQueryState } from 'nuqs'
 import { truncateText } from '@/lib/utils'
 import { Skeleton } from '@/components/ui/skeleton'
+import { ThemeToggle } from '@/components/ui/theme-toggle'
 const ENDPOINT_PLACEHOLDER = 'NO ENDPOINT ADDED'
-const SidebarHeader = () => (
-  <div className="flex items-center gap-2">
-    <Icon type="agno" size="xs" />
-    <span className="text-xs font-medium uppercase text-white">Agent UI</span>
+const SidebarHeader = ({ 
+  isCollapsed, 
+  onToggleCollapse 
+}: { 
+  isCollapsed: boolean
+  onToggleCollapse: () => void 
+}) => (
+  <div className="flex items-center justify-between">
+    <div className="flex items-center gap-2">
+      <Icon type="agno" size="xs" />
+      <span className="text-xs font-medium uppercase text-primary">Agent UI</span>
+    </div>
+    <div className="flex items-center gap-1">
+      <ThemeToggle />
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={onToggleCollapse}
+        className="h-9 w-9 hover:bg-primary/10"
+        aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+        type="button"
+      >
+        <Icon
+          type="sheet"
+          size="xs"
+          className={`transform transition-transform duration-200 text-primary ${isCollapsed ? 'rotate-180' : 'rotate-0'}`}
+        />
+      </Button>
+    </div>
   </div>
 )
 
@@ -32,15 +58,15 @@ const NewChatButton = ({
     onClick={onClick}
     disabled={disabled}
     size="lg"
-    className="h-9 w-full rounded-xl bg-primary text-xs font-medium text-background hover:bg-primary/80"
+    className="h-9 w-full rounded-xl bg-primary text-xs font-medium text-primary-foreground hover:bg-primary/80"
   >
-    <Icon type="plus-icon" size="xs" className="text-background" />
+          <Icon type="plus-icon" size="xs" className="text-primary-foreground" />
     <span className="uppercase">New Chat</span>
   </Button>
 )
 
 const ModelDisplay = ({ model }: { model: string }) => (
-  <div className="flex h-9 w-full items-center gap-3 rounded-xl border border-primary/15 bg-accent p-3 text-xs font-medium uppercase text-muted">
+  <div className="flex h-9 w-full items-center gap-3 rounded-xl border border-primary/15 bg-accent p-3 text-xs font-medium uppercase text-muted-foreground">
     {(() => {
       const icon = getProviderIcon(model)
       return icon ? <Icon type={icon} className="shrink-0" size="xs" /> : null
@@ -121,7 +147,7 @@ const Endpoint = () => {
             value={endpointValue}
             onChange={(e) => setEndpointValue(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex h-9 w-full items-center text-ellipsis rounded-xl border border-primary/15 bg-accent p-3 text-xs font-medium text-muted"
+            className="flex h-9 w-full items-center text-ellipsis rounded-xl border border-primary/15 bg-accent p-3 text-xs font-medium text-muted-foreground"
             autoFocus
           />
           <Button
@@ -165,7 +191,7 @@ const Endpoint = () => {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <p className="text-xs font-medium text-muted">
+                  <p className="text-xs font-medium text-muted-foreground">
                     {isMounted
                       ? truncateText(selectedEndpoint, 21) ||
                         ENDPOINT_PLACEHOLDER
@@ -226,19 +252,6 @@ const Sidebar = () => {
       animate={{ width: isCollapsed ? '2.5rem' : '16rem' }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
     >
-      <motion.button
-        onClick={() => setIsCollapsed(!isCollapsed)}
-        className="absolute right-2 top-2 z-10 p-1"
-        aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-        type="button"
-        whileTap={{ scale: 0.95 }}
-      >
-        <Icon
-          type="sheet"
-          size="xs"
-          className={`transform ${isCollapsed ? 'rotate-180' : 'rotate-0'}`}
-        />
-      </motion.button>
       <motion.div
         className="w-60 space-y-5"
         initial={{ opacity: 0, x: -20 }}
@@ -248,7 +261,10 @@ const Sidebar = () => {
           pointerEvents: isCollapsed ? 'none' : 'auto'
         }}
       >
-        <SidebarHeader />
+        <SidebarHeader 
+          isCollapsed={isCollapsed}
+          onToggleCollapse={() => setIsCollapsed(!isCollapsed)}
+        />
         <NewChatButton
           disabled={messages.length === 0}
           onClick={handleNewChat}
