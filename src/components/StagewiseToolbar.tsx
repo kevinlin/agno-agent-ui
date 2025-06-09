@@ -22,4 +22,4 @@ export function StagewiseToolbar() {
   }
 
   return null // The toolbar is initialized programmatically
-} 
+}

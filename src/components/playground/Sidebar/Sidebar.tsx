@@ -15,17 +15,19 @@ import { truncateText } from '@/lib/utils'
 import { Skeleton } from '@/components/ui/skeleton'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 const ENDPOINT_PLACEHOLDER = 'NO ENDPOINT ADDED'
-const SidebarHeader = ({ 
-  isCollapsed, 
-  onToggleCollapse 
-}: { 
+const SidebarHeader = ({
+  isCollapsed,
+  onToggleCollapse
+}: {
   isCollapsed: boolean
-  onToggleCollapse: () => void 
+  onToggleCollapse: () => void
 }) => (
   <div className="flex items-center justify-between">
     <div className="flex items-center gap-2">
       <Icon type="agno" size="xs" />
-      <span className="text-xs font-medium uppercase text-primary">Agent UI</span>
+      <span className="text-xs font-medium uppercase text-primary">
+        Agent UI
+      </span>
     </div>
     <div className="flex items-center gap-1">
       <ThemeToggle />
@@ -40,7 +42,7 @@ const SidebarHeader = ({
         <Icon
           type="sheet"
           size="xs"
-          className={`transform transition-transform duration-200 text-primary ${isCollapsed ? 'rotate-180' : 'rotate-0'}`}
+          className={`transform text-primary transition-transform duration-200 ${isCollapsed ? 'rotate-180' : 'rotate-0'}`}
         />
       </Button>
     </div>
@@ -60,7 +62,7 @@ const NewChatButton = ({
     size="lg"
     className="h-9 w-full rounded-xl bg-primary text-xs font-medium text-primary-foreground hover:bg-primary/80"
   >
-          <Icon type="plus-icon" size="xs" className="text-primary-foreground" />
+    <Icon type="plus-icon" size="xs" className="text-primary-foreground" />
     <span className="uppercase">New Chat</span>
   </Button>
 )
@@ -261,7 +263,7 @@ const Sidebar = () => {
           pointerEvents: isCollapsed ? 'none' : 'auto'
         }}
       >
-        <SidebarHeader 
+        <SidebarHeader
           isCollapsed={isCollapsed}
           onToggleCollapse={() => setIsCollapsed(!isCollapsed)}
         />
