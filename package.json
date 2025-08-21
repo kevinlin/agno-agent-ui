@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "ultracite lint",
-    "format": "ultracite lint",
+    "lint:fix": "ultracite lint --write",
+    "format": "ultracite format",
+    "format:fix": "ultracite format --write",
     "typecheck": "tsc --noEmit",
     "validate": "pnpm run lint && pnpm run format && pnpm run typecheck"
   },
