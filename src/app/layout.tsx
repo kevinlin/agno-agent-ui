@@ -5,8 +5,6 @@ import { Toaster } from '@/components/ui/sonner'
 import { ThemeProvider } from '@/components/providers'
 import './globals.css'
 
-// Stagewise toolbar for development
-import { StagewiseToolbar } from '@/components/StagewiseToolbar'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -43,8 +41,7 @@ export default function RootLayout({
           <NuqsAdapter>{children}</NuqsAdapter>
           <Toaster />
         </ThemeProvider>
-        {/* Stagewise toolbar - development only */}
-        <StagewiseToolbar />
+
       </body>
     </html>
   )
