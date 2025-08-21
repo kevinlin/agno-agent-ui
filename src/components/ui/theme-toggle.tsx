@@ -1,7 +1,7 @@
 'use client'
 
-import * as React from 'react'
 import { useTheme } from 'next-themes'
+import * as React from 'react'
 import { Button } from '@/components/ui/button'
 import Icon from '@/components/ui/icon'
 
@@ -15,8 +15,8 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <Button variant="ghost" size="icon" className="h-9 w-9">
-        <Icon type="sun" size="xs" />
+      <Button className="h-9 w-9" size="icon" variant="ghost">
+        <Icon size="xs" type="sun" />
         <span className="sr-only">Toggle theme</span>
       </Button>
     )
@@ -24,15 +24,15 @@ export function ThemeToggle() {
 
   return (
     <Button
-      variant="ghost"
-      size="icon"
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       className="h-9 w-9 hover:bg-primary/10"
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      size="icon"
+      variant="ghost"
     >
       {theme === 'light' ? (
-        <Icon type="moon" size="xs" />
+        <Icon size="xs" type="moon" />
       ) : (
-        <Icon type="sun" size="xs" />
+        <Icon size="xs" type="sun" />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>

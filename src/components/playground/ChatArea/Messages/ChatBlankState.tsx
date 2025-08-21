@@ -1,10 +1,10 @@
 'use client'
 
+import { motion, type Variants } from 'framer-motion'
 import Link from 'next/link'
-import { motion, Variants } from 'framer-motion'
-import Icon from '@/components/ui/icon'
-import { IconType } from '@/components/ui/icon/types'
 import React, { useState } from 'react'
+import Icon from '@/components/ui/icon'
+import type { IconType } from '@/components/ui/icon/types'
 
 const EXTERNAL_LINKS = {
   documentation: 'https://agno.link/agent-ui',
@@ -51,9 +51,9 @@ const ActionButton = ({ href, variant, text }: ActionButtonProps) => {
 
   return (
     <Link
+      className={`${baseStyles} ${variant ? variantStyles[variant] : ''}`}
       href={href}
       target="_blank"
-      className={`${baseStyles} ${variant ? variantStyles[variant] : ''}`}
     >
       {text}
     </Link>
@@ -106,15 +106,15 @@ const ChatBlankState = () => {
 
   return (
     <section
-      className="flex flex-col items-center text-center font-geist"
       aria-label="Welcome message"
+      className="flex flex-col items-center text-center font-geist"
     >
       <div className="flex max-w-3xl flex-col gap-y-8">
         <motion.h1
-          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
+          className="font-[600] text-3xl tracking-tight"
+          initial={{ opacity: 0, y: 10 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-3xl font-[600] tracking-tight"
         >
           <div className="flex items-center justify-center gap-x-2 whitespace-nowrap font-medium">
             <span className="flex items-center font-[600]">
@@ -122,12 +122,12 @@ const ChatBlankState = () => {
             </span>
             <span className="inline-flex translate-y-[10px] scale-125 items-center transition-transform duration-200 hover:rotate-6">
               <Link
-                href={EXTERNAL_LINKS.agno}
-                target="_blank"
-                rel="noopener"
                 className="cursor-pointer"
+                href={EXTERNAL_LINKS.agno}
+                rel="noopener"
+                target="_blank"
               >
-                <Icon type="agno-tag" size="default" />
+                <Icon size="default" type="agno-tag" />
               </Link>
             </span>
             <span className="flex items-center font-[600]">
@@ -137,32 +137,32 @@ const ChatBlankState = () => {
               <div className="relative ml-2 h-[40px] w-[90px]">
                 {TECH_ICONS.map((icon) => (
                   <motion.div
-                    key={icon.type}
+                    animate={hoveredIcon === icon.type ? 'hover' : 'exit'}
                     className={`absolute ${icon.position} top-0`}
+                    initial="initial"
+                    key={icon.type}
+                    onHoverEnd={() => setHoveredIcon(null)}
+                    onHoverStart={() => setHoveredIcon(icon.type)}
                     style={{ zIndex: icon.zIndex }}
                     variants={iconVariants}
-                    initial="initial"
                     whileHover="hover"
-                    animate={hoveredIcon === icon.type ? 'hover' : 'exit'}
-                    onHoverStart={() => setHoveredIcon(icon.type)}
-                    onHoverEnd={() => setHoveredIcon(null)}
                   >
                     <Link
-                      href={icon.link}
-                      target="_blank"
-                      rel="noopener"
                       className="relative block cursor-pointer"
+                      href={icon.link}
+                      rel="noopener"
+                      target="_blank"
                     >
                       <div>
-                        <Icon type={icon.type} size="default" />
+                        <Icon size="default" type={icon.type} />
                       </div>
                       <motion.div
-                        className="pointer-events-none absolute bottom-full left-1/2 mb-1 -translate-x-1/2 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-xs text-primary"
-                        variants={tooltipVariants}
-                        initial="hidden"
                         animate={
                           hoveredIcon === icon.type ? 'visible' : 'hidden'
                         }
+                        className="-translate-x-1/2 pointer-events-none absolute bottom-full left-1/2 mb-1 transform whitespace-nowrap rounded bg-neutral-800 px-2 py-1 text-primary text-xs"
+                        initial="hidden"
+                        variants={tooltipVariants}
                       >
                         {icon.name}
                       </motion.div>
@@ -175,15 +175,15 @@ const ChatBlankState = () => {
           <p>For the full experience, visit the Agent Playground.</p>
         </motion.h1>
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
           className="flex justify-center gap-4"
+          initial={{ opacity: 0, y: 10 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <ActionButton
             href={EXTERNAL_LINKS.documentation}
-            variant="primary"
             text="GO TO DOCS"
+            variant="primary"
           />
           <ActionButton
             href={EXTERNAL_LINKS.playground}

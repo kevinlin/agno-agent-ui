@@ -1,10 +1,7 @@
 import { create } from 'zustand'
-import { persist, createJSONStorage } from 'zustand/middleware'
+import { createJSONStorage, persist } from 'zustand/middleware'
 
-import {
-  type PlaygroundChatMessage,
-  type SessionEntry
-} from '@/types/playground'
+import type { PlaygroundChatMessage, SessionEntry } from '@/types/playground'
 
 interface Agent {
   value: string

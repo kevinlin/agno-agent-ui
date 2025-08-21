@@ -1,14 +1,12 @@
+import { useQueryState } from 'nuqs'
 import { useCallback } from 'react'
 import { toast } from 'sonner'
-
-import { usePlaygroundStore } from '../store'
-
-import { ComboboxAgent, type PlaygroundChatMessage } from '@/types/playground'
 import {
   getPlaygroundAgentsAPI,
   getPlaygroundStatusAPI
 } from '@/api/playground'
-import { useQueryState } from 'nuqs'
+import type { ComboboxAgent, PlaygroundChatMessage } from '@/types/playground'
+import { usePlaygroundStore } from '../store'
 
 const useChatActions = () => {
   const { chatInputRef } = usePlaygroundStore()

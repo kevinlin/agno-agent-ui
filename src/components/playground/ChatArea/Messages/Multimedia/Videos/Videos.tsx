@@ -3,9 +3,8 @@
 import { memo } from 'react'
 
 import { toast } from 'sonner'
-
-import { type VideoData } from '@/types/playground'
 import Icon from '@/components/ui/icon'
+import type { VideoData } from '@/types/playground'
 
 const VideoItem = memo(({ video }: { video: VideoData }) => {
   const videoUrl = video.url
@@ -43,21 +42,21 @@ const VideoItem = memo(({ video }: { video: VideoData }) => {
       <div className="group relative w-full max-w-xl">
         {}
         <video
-          src={videoUrl}
           autoPlay
-          muted
-          loop
-          controls
           className="w-full rounded-lg"
+          controls
+          loop
+          muted
+          src={videoUrl}
           style={{ aspectRatio: '16 / 9' }}
         />
         <button
-          type="button"
-          onClick={handleDownload}
-          className="absolute right-2 top-2 flex items-center justify-center rounded-sm bg-secondary/80 p-1.5 opacity-0 transition-opacity duration-200 hover:bg-secondary group-hover:opacity-100"
           aria-label="Download GIF"
+          className="absolute top-2 right-2 flex items-center justify-center rounded-sm bg-secondary/80 p-1.5 opacity-0 transition-opacity duration-200 hover:bg-secondary group-hover:opacity-100"
+          onClick={handleDownload}
+          type="button"
         >
-          <Icon type="download" size="xs" />
+          <Icon size="xs" type="download" />
         </button>
       </div>
     </div>

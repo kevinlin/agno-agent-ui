@@ -1,12 +1,12 @@
 'use client'
+import { useQueryState } from 'nuqs'
 import { useState } from 'react'
 import { toast } from 'sonner'
-import { TextArea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
-import { usePlaygroundStore } from '@/store'
-import useAIChatStreamHandler from '@/hooks/useAIStreamHandler'
-import { useQueryState } from 'nuqs'
 import Icon from '@/components/ui/icon'
+import { TextArea } from '@/components/ui/textarea'
+import useAIChatStreamHandler from '@/hooks/useAIStreamHandler'
+import { usePlaygroundStore } from '@/store'
 
 const ChatInput = () => {
   const { chatInputRef } = usePlaygroundStore()
@@ -35,8 +35,8 @@ const ChatInput = () => {
   return (
     <div className="relative mx-auto mb-1 flex w-full max-w-2xl items-end justify-center gap-x-2 font-geist">
       <TextArea
-        placeholder={'Ask anything'}
-        value={inputMessage}
+        className="w-full border border-accent bg-primaryAccent px-4 text-primary text-sm focus:border-accent"
+        disabled={!selectedAgent}
         onChange={(e) => setInputMessage(e.target.value)}
         onKeyDown={(e) => {
           if (
@@ -49,17 +49,17 @@ const ChatInput = () => {
             handleSubmit()
           }
         }}
-        className="w-full border border-accent bg-primaryAccent px-4 text-sm text-primary focus:border-accent"
-        disabled={!selectedAgent}
+        placeholder={'Ask anything'}
         ref={chatInputRef}
+        value={inputMessage}
       />
       <Button
-        onClick={handleSubmit}
-        disabled={!selectedAgent || !inputMessage.trim() || isStreaming}
-        size="icon"
         className="rounded-xl bg-primary p-5 text-primaryAccent"
+        disabled={!(selectedAgent && inputMessage.trim()) || isStreaming}
+        onClick={handleSubmit}
+        size="icon"
       >
-        <Icon type="send" color="primaryAccent" />
+        <Icon color="primaryAccent" type="send" />
       </Button>
     </div>
   )

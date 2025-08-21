@@ -1,46 +1,45 @@
+import { PlusIcon } from '@radix-ui/react-icons'
 import {
-  MistralLogo,
-  OpenAILogo,
-  GeminiLogo,
-  AwsLogo,
-  AzureLogo,
-  AnthropicLogo,
-  GroqLogo,
-  FireworksLogo,
-  DeepseekLogo,
-  CohereLogo,
-  OllamaLogo,
-  XaiLogo,
-  AgnoIcon,
-  UserIcon,
-  AgentIcon,
-  SheetIcon,
-  NextjsTag,
-  ShadcnTag,
-  TailwindTag,
-  AgnoTag,
-  ReasoningIcon,
-  ReferencesIcon
-} from './custom-icons'
-import { IconTypeMap } from './types'
-import {
-  RefreshCw,
-  Edit,
-  Save,
-  X,
   ArrowDown,
-  SendIcon,
-  Download,
-  HammerIcon,
   Check,
   ChevronDown,
   ChevronUp,
-  Trash,
+  Download,
+  Edit,
+  HammerIcon,
+  Moon,
+  RefreshCw,
+  Save,
+  SendIcon,
   Sun,
-  Moon
+  Trash,
+  X
 } from 'lucide-react'
-
-import { PlusIcon } from '@radix-ui/react-icons'
+import {
+  AgentIcon,
+  AgnoIcon,
+  AgnoTag,
+  AnthropicLogo,
+  AwsLogo,
+  AzureLogo,
+  CohereLogo,
+  DeepseekLogo,
+  FireworksLogo,
+  GeminiLogo,
+  GroqLogo,
+  MistralLogo,
+  NextjsTag,
+  OllamaLogo,
+  OpenAILogo,
+  ReasoningIcon,
+  ReferencesIcon,
+  ShadcnTag,
+  SheetIcon,
+  TailwindTag,
+  UserIcon,
+  XaiLogo
+} from './custom-icons'
+import type { IconTypeMap } from './types'
 
 export const ICONS: IconTypeMap = {
   'open-ai': OpenAILogo,

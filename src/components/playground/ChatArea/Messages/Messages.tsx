@@ -1,18 +1,16 @@
-import type { PlaygroundChatMessage } from '@/types/playground'
-
-import { AgentMessage, UserMessage } from './MessageItem'
-import Tooltip from '@/components/ui/tooltip'
-import { memo } from 'react'
-import {
-  ToolCallProps,
-  ReasoningStepProps,
-  ReasoningProps,
-  ReferenceData,
-  Reference
-} from '@/types/playground'
-import React, { type FC } from 'react'
-import ChatBlankState from './ChatBlankState'
+import React, { type FC, memo } from 'react'
 import Icon from '@/components/ui/icon'
+import Tooltip from '@/components/ui/tooltip'
+import type {
+  PlaygroundChatMessage,
+  ReasoningProps,
+  ReasoningStepProps,
+  Reference,
+  ReferenceData,
+  ToolCallProps
+} from '@/types/playground'
+import ChatBlankState from './ChatBlankState'
+import { AgentMessage, UserMessage } from './MessageItem'
 
 interface MessageListProps {
   messages: PlaygroundChatMessage[]
@@ -33,8 +31,8 @@ interface ReferenceItemProps {
 
 const ReferenceItem: FC<ReferenceItemProps> = ({ reference }) => (
   <div className="relative flex h-[63px] w-[190px] cursor-default flex-col justify-between overflow-hidden rounded-md bg-background-secondary p-3 transition-colors hover:bg-background-secondary/80">
-    <p className="text-sm font-medium text-primary">{reference.name}</p>
-    <p className="truncate text-xs text-primary/40">{reference.content}</p>
+    <p className="font-medium text-primary text-sm">{reference.name}</p>
+    <p className="truncate text-primary/40 text-xs">{reference.content}</p>
   </div>
 )
 
@@ -42,8 +40,8 @@ const References: FC<ReferenceProps> = ({ references }) => (
   <div className="flex flex-col gap-4">
     {references.map((referenceData, index) => (
       <div
-        key={`${referenceData.query}-${index}`}
         className="flex flex-col gap-3"
+        key={`${referenceData.query}-${index}`}
       >
         <div className="flex flex-wrap gap-3">
           {referenceData.references.map((reference, refIndex) => (
@@ -65,11 +63,11 @@ const AgentMessageWrapper = ({ message }: MessageWrapperProps) => {
         message.extra_data.reasoning_steps.length > 0 && (
           <div className="flex items-start gap-4">
             <Tooltip
-              delayDuration={0}
               content={<p className="text-accent">Reasoning</p>}
+              delayDuration={0}
               side="top"
             >
-              <Icon type="reasoning" size="sm" />
+              <Icon size="sm" type="reasoning" />
             </Tooltip>
             <div className="flex flex-col gap-3">
               <p className="text-xs uppercase">Reasoning</p>
@@ -81,11 +79,11 @@ const AgentMessageWrapper = ({ message }: MessageWrapperProps) => {
         message.extra_data.references.length > 0 && (
           <div className="flex items-start gap-4">
             <Tooltip
-              delayDuration={0}
               content={<p className="text-accent">References</p>}
+              delayDuration={0}
               side="top"
             >
-              <Icon type="references" size="sm" />
+              <Icon size="sm" type="references" />
             </Tooltip>
             <div className="flex flex-col gap-3">
               <References references={message.extra_data.references} />
@@ -95,15 +93,15 @@ const AgentMessageWrapper = ({ message }: MessageWrapperProps) => {
       {message.tool_calls && message.tool_calls.length > 0 && (
         <div className="flex items-start gap-3">
           <Tooltip
-            delayDuration={0}
             content={<p className="text-accent">Tool Calls</p>}
+            delayDuration={0}
             side="top"
           >
             <Icon
-              type="hammer"
               className="rounded-lg bg-background-secondary p-1"
-              size="sm"
               color="secondary"
+              size="sm"
+              type="hammer"
             />
           </Tooltip>
 
@@ -136,9 +134,9 @@ const Reasonings: FC<ReasoningProps> = ({ reasoning }) => (
   <div className="flex flex-col items-start justify-center gap-2">
     {reasoning.map((title, index) => (
       <Reasoning
+        index={index}
         key={`${title.title}-${title.action}-${index}`}
         stepTitle={title.title}
-        index={index}
       />
     ))}
   </div>
@@ -146,7 +144,7 @@ const Reasonings: FC<ReasoningProps> = ({ reasoning }) => (
 
 const ToolComponent = memo(({ tools }: ToolCallProps) => (
   <div className="cursor-default rounded-full bg-accent px-2 py-1.5 text-xs">
-    <p className="font-dmmono uppercase text-primary/80">{tools.tool_name}</p>
+    <p className="font-dmmono text-primary/80 uppercase">{tools.tool_name}</p>
   </div>
 ))
 ToolComponent.displayName = 'ToolComponent'
@@ -164,9 +162,9 @@ const Messages = ({ messages }: MessageListProps) => {
         if (message.role === 'agent') {
           return (
             <AgentMessageWrapper
+              isLastMessage={isLastMessage}
               key={key}
               message={message}
-              isLastMessage={isLastMessage}
             />
           )
         }

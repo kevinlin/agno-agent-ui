@@ -1,26 +1,26 @@
-import { type FC } from 'react'
+import type { FC } from 'react'
 
 export const AgnoIcon: FC = ({ ...props }) => {
   return (
     <svg
-      width="16"
+      fill="none"
       height="16"
       viewBox="0 0 16 16"
-      fill="none"
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <g clipPath="url(#clip0_2815_4632)">
         <path
-          fillRule="evenodd"
           clipRule="evenodd"
           d="M15.7469 1.84196C16.0957 2.52647 16.0957 3.42256 16.0957 5.21473V10.9752C16.0957 12.7674 16.0957 13.6634 15.7469 14.348C15.4401 14.9501 14.9506 15.4396 14.3485 15.7464C13.6639 16.0952 12.7679 16.0952 10.9757 16.0952H5.21522C3.42305 16.0952 2.52696 16.0952 1.84245 15.7464C1.24033 15.4396 0.750789 14.9501 0.443994 14.348C0.0952148 13.6634 0.0952148 12.7674 0.0952148 10.9752V5.21473C0.0952148 3.42256 0.0952148 2.52647 0.443994 1.84196C0.750789 1.23984 1.24033 0.7503 1.84245 0.443506C2.52696 0.0947266 3.42305 0.0947266 5.21521 0.0947266H10.9757C12.7678 0.0947266 13.6639 0.0947266 14.3485 0.443506C14.9506 0.7503 15.4401 1.23984 15.7469 1.84196ZM5.27398 3.77524H9.3046L12.594 12.0905H10.9168L8.32056 5.18973H5.27398V3.77524ZM2.99402 10.676H7.12113V12.0905H2.99402V10.676Z"
           fill="#FF4017"
+          fillRule="evenodd"
         />
       </g>
       <defs>
         <clipPath id="clip0_2815_4632">
-          <rect width="16" height="16" fill="white" />
+          <rect fill="white" height="16" width="16" />
         </clipPath>
       </defs>
     </svg>
@@ -30,20 +30,20 @@ export const AgnoIcon: FC = ({ ...props }) => {
 export const UserIcon: FC = ({ ...props }) => {
   return (
     <svg
-      width="16"
+      fill="none"
       height="16"
       viewBox="0 0 16 16"
-      fill="none"
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <rect width="16" height="16" rx="4" fill="#FAFAFA" />
+      <rect fill="#FAFAFA" height="16" rx="4" width="16" />
       <path
         d="M11.5 12.5V11.5C11.5 10.9696 11.2893 10.4609 10.9142 10.0858C10.5391 9.71071 10.0304 9.5 9.5 9.5H6.5C5.96957 9.5 5.46086 9.71071 5.08579 10.0858C4.71071 10.4609 4.5 10.9696 4.5 11.5V12.5M10 5.5C10 6.60457 9.10457 7.5 8 7.5C6.89543 7.5 6 6.60457 6 5.5C6 4.39543 6.89543 3.5 8 3.5C9.10457 3.5 10 4.39543 10 5.5Z"
         stroke="#18181B"
-        strokeWidth="0.75"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="0.75"
       />
     </svg>
   )
@@ -52,25 +52,25 @@ export const UserIcon: FC = ({ ...props }) => {
 export const AgentIcon: FC = ({ ...props }) => {
   return (
     <svg
-      width="16"
+      fill="none"
       height="16"
       viewBox="0 0 16 16"
-      fill="none"
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <rect width="16" height="16" rx="4" fill="#FF4017" />
+      <rect fill="#FF4017" height="16" rx="4" width="16" />
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M3.70226 6.05678C3.45553 6.06203 3.25125 5.86627 3.246 5.61953C3.22669 4.71202 3.45412 3.98771 4.05158 3.56286C4.62138 3.15769 5.40509 3.11931 6.26087 3.24653C6.50498 3.28281 6.67346 3.51012 6.63717 3.75423C6.60089 3.99834 6.37358 4.16682 6.12947 4.13053C5.33187 4.01197 4.8465 4.09424 4.5695 4.29121C4.32016 4.46851 4.12308 4.82784 4.13952 5.60052C4.14477 5.84726 3.949 6.05153 3.70226 6.05678Z"
         fill="white"
+        fillRule="evenodd"
       />
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M12.3156 6.05678C12.5623 6.06203 12.7666 5.86627 12.7718 5.61953C12.7911 4.71202 12.5637 3.98771 11.9662 3.56286C11.3964 3.15769 10.6127 3.11931 9.75695 3.24653C9.51284 3.28281 9.34436 3.51012 9.38065 3.75423C9.41694 3.99834 9.64424 4.16682 9.88836 4.13053C10.686 4.01197 11.1713 4.09424 11.4483 4.29121C11.6977 4.46851 11.8947 4.82784 11.8783 5.60052C11.8731 5.84726 12.0688 6.05153 12.3156 6.05678Z"
         fill="white"
+        fillRule="evenodd"
       />
       <path
         d="M7.25597 7.86712C7.25597 8.28683 6.91573 8.62707 6.49603 8.62707C6.07632 8.62707 5.73608 8.28683 5.73608 7.86712C5.73608 7.44742 6.07632 7.10718 6.49603 7.10718C6.91573 7.10718 7.25597 7.44742 7.25597 7.86712Z"
@@ -81,16 +81,16 @@ export const AgentIcon: FC = ({ ...props }) => {
         fill="white"
       />
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M12.3153 9.97544C12.5621 9.9702 12.7663 10.166 12.7716 10.4127C12.7909 11.3202 12.5635 12.0445 11.966 12.4694C11.3962 12.8745 10.6125 12.9129 9.7567 12.7857C9.51259 12.7494 9.34412 12.5221 9.38041 12.278C9.41669 12.0339 9.644 11.8654 9.88811 11.9017C10.6857 12.0203 11.1711 11.938 11.4481 11.741C11.6974 11.5637 11.8945 11.2044 11.8781 10.4317C11.8728 10.185 12.0686 9.98069 12.3153 9.97544Z"
         fill="white"
+        fillRule="evenodd"
       />
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M3.70251 9.97544C3.45577 9.9702 3.25149 10.166 3.24624 10.4127C3.22693 11.3202 3.45436 12.0445 4.05183 12.4694C4.62162 12.8745 5.40533 12.9129 6.26112 12.7857C6.50523 12.7494 6.6737 12.5221 6.63742 12.278C6.60113 12.0339 6.37382 11.8654 6.12971 11.9017C5.33212 12.0203 4.84675 11.938 4.56974 11.741C4.32041 11.5637 4.12332 11.2044 4.13976 10.4317C4.14501 10.185 3.94924 9.98069 3.70251 9.97544Z"
         fill="white"
+        fillRule="evenodd"
       />
     </svg>
   )
@@ -98,17 +98,17 @@ export const AgentIcon: FC = ({ ...props }) => {
 
 export const MistralLogo: FC = ({ ...props }) => (
   <svg
-    width="22"
+    fill="none"
     height="20"
     viewBox="0 0 22 20"
-    fill="none"
+    width="22"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <path
-      opacity="0.7"
       d="M19.4156 0.571411H15.6753V4.31167H19.4156V0.571411Z"
       fill="#FAFAFA"
+      opacity="0.7"
     />
     <path
       d="M21.2857 0.571411H17.5454V4.31167H21.2857V0.571411Z"
@@ -152,9 +152,9 @@ export const MistralLogo: FC = ({ ...props }) => (
       fill="#FAFAFA"
     />
     <path
-      opacity="0.7"
       d="M15.6753 4.31165H11.9351V8.05191H15.6753V4.31165Z"
       fill="#FAFAFA"
+      opacity="0.7"
     />
     <path
       d="M17.5454 4.31165H13.8052V8.05191H17.5454V4.31165Z"
@@ -171,9 +171,9 @@ export const MistralLogo: FC = ({ ...props }) => (
     />
     <path d="M10.065 8.05188H6.32471V11.7921H10.065V8.05188Z" fill="#FAFAFA" />
     <path
-      opacity="0.7"
       d="M11.9351 11.7922H8.19482V15.5325H11.9351V11.7922Z"
       fill="#FAFAFA"
+      opacity="0.7"
     />
     <path
       d="M13.8052 11.7922H10.0649V15.5325H13.8052V11.7922Z"
@@ -188,18 +188,18 @@ export const MistralLogo: FC = ({ ...props }) => (
       fill="#FAFAFA"
     />
     <path
-      opacity="0.7"
       d="M19.4156 11.7922H15.6753V15.5325H19.4156V11.7922Z"
       fill="#FAFAFA"
+      opacity="0.7"
     />
     <path
       d="M21.2857 11.7922H17.5454V15.5325H21.2857V11.7922Z"
       fill="#FAFAFA"
     />
     <path
-      opacity="0.7"
       d="M19.4156 15.5323H15.6753V19.2726H19.4156V15.5323Z"
       fill="#FAFAFA"
+      opacity="0.7"
     />
     <path
       d="M6.32473 11.7922H2.58447V15.5325H6.32473V11.7922Z"
@@ -218,10 +218,10 @@ export const MistralLogo: FC = ({ ...props }) => (
 
 export const GeminiLogo: FC = () => (
   <svg
-    width="20"
+    fill="none"
     height="20"
     viewBox="0 0 20 20"
-    fill="none"
+    width="20"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -233,10 +233,10 @@ export const GeminiLogo: FC = () => (
 
 export const AwsLogo: FC = ({ ...props }) => (
   <svg
-    width="22"
+    fill="none"
     height="14"
     viewBox="0 0 22 14"
-    fill="none"
+    width="22"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -246,21 +246,21 @@ export const AwsLogo: FC = ({ ...props }) => (
         fill="#FAFAFA"
       />
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M19.7927 10.3991C17.4117 12.1577 13.9525 13.0912 10.9782 13.0912C6.80976 13.0912 3.05384 11.5498 0.217001 8.98792C-0.00734065 8.78529 0.195291 8.51029 0.463054 8.6695C3.53147 10.4498 7.31634 11.5281 11.2315 11.5281C13.8729 11.5281 16.7749 10.9781 19.4453 9.8491C19.8433 9.66818 20.1834 10.1096 19.7927 10.3991Z"
         fill="#FAFAFA"
+        fillRule="evenodd"
       />
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M20.7838 9.27038C20.4799 8.87959 18.772 9.08222 17.9976 9.1763C17.7661 9.20525 17.7299 9.00262 17.9397 8.85064C19.3003 7.89538 21.5364 8.17038 21.797 8.4888C22.0575 8.81446 21.7246 11.0506 20.4509 12.1217C20.2555 12.2881 20.0674 12.2013 20.1542 11.9842C20.4437 11.2677 21.0878 9.65393 20.7838 9.27038Z"
         fill="#FAFAFA"
+        fillRule="evenodd"
       />
     </g>
     <defs>
       <clipPath id="clip0_8005_20521">
-        <rect width="22" height="13.1711" fill="white" />
+        <rect fill="white" height="13.1711" width="22" />
       </clipPath>
     </defs>
   </svg>
@@ -268,10 +268,10 @@ export const AwsLogo: FC = ({ ...props }) => (
 
 export const AnthropicLogo: FC = ({ ...props }) => (
   <svg
-    width="21"
+    fill="none"
     height="15"
     viewBox="0 0 21 15"
-    fill="none"
+    width="21"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -283,7 +283,7 @@ export const AnthropicLogo: FC = ({ ...props }) => (
     </g>
     <defs>
       <clipPath id="clip0_8005_20528">
-        <rect width="20.6249" height="14.3478" fill="white" />
+        <rect fill="white" height="14.3478" width="20.6249" />
       </clipPath>
     </defs>
   </svg>
@@ -291,10 +291,10 @@ export const AnthropicLogo: FC = ({ ...props }) => (
 
 export const OllamaLogo: FC = ({ ...props }) => (
   <svg
-    width="16"
+    fill="none"
     height="22"
     viewBox="0 0 16 22"
-    fill="none"
+    width="16"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -303,10 +303,10 @@ export const OllamaLogo: FC = ({ ...props }) => (
       fill="#FAFAFA"
     />
     <path
-      fillRule="evenodd"
       clipRule="evenodd"
       d="M5.75158 2.91052C5.53174 2.0987 5.19725 1.27988 4.45008 0.82542C4.05056 0.669299 3.56483 0.665313 3.1941 0.893697C2.63015 1.3091 2.24679 2.08179 2.13263 2.76549L2.11014 2.92613C1.9698 3.69749 1.93035 4.46221 1.98516 5.24411L1.9974 5.39046C2.00502 5.48223 2.01295 5.57397 2.02122 5.66568C2.02479 5.69913 2.02905 5.73135 2.03318 5.76259C2.05519 5.92915 2.07352 6.06782 1.96459 6.2164C1.47913 6.59227 1.04256 7.12358 0.774236 7.67271L0.687434 7.87172C0.580734 8.10782 0.483549 8.34303 0.410356 8.59154C0.179013 9.54096 0.260673 10.6965 0.729776 11.5555C0.811546 11.7038 0.88611 11.8508 0.958425 12.0043C0.958425 12.2854 0.913432 12.3987 0.797524 12.6479C0.510049 13.2599 0.467807 13.9115 0.468974 14.579L0.471488 14.8074C0.471936 15.5967 0.528824 16.3265 0.899146 17.0388C1.03892 17.2886 1.1281 17.5052 1.0484 17.7902C0.557911 18.9435 0.551088 20.0587 0.687434 21.2858H1.97464V21.0148C1.71025 20.139 1.7711 19.1799 2.14639 18.3443L2.16683 18.3023C2.26477 18.1013 2.36207 17.9015 2.44888 17.6952C2.49898 17.4454 2.50268 17.2438 2.36843 17.0177C1.81616 16.4083 1.69579 15.7284 1.68018 14.9261L1.67825 14.71C1.66941 14.0734 1.72655 13.4939 2.03048 12.9245C2.04506 12.9028 2.05964 12.8813 2.07412 12.86C2.25028 12.6002 2.41333 12.3598 2.42347 12.034C2.39679 11.8872 2.38692 11.8329 2.36035 11.7887C2.34476 11.7627 2.32342 11.7402 2.28956 11.7045C1.84561 11.2805 1.59179 10.6432 1.5491 10.0426C1.51683 9.0468 1.7191 8.19467 2.39859 7.42818C3.15842 6.70012 3.8477 6.53584 4.86954 6.52391C4.96598 6.5241 5.06251 6.52249 5.15879 6.51676C5.18883 6.48672 5.20555 6.47 5.22023 6.45165C5.23866 6.42862 5.25388 6.40302 5.2882 6.34528C5.57717 5.85158 5.92486 5.40941 6.39519 5.07712C7.13017 4.62811 7.82723 4.41943 8.68961 4.57854C9.48851 4.83711 10.1926 5.25935 10.6464 5.97478C10.7408 6.17636 10.8301 6.35502 10.9851 6.51676C11.1486 6.56835 11.2843 6.57262 11.4554 6.5712L11.6329 6.56334C12.3759 6.56529 12.9767 6.70263 13.5293 7.23129L13.6273 7.32974C14.1182 7.76083 14.4817 8.37325 14.5757 9.02343C14.6238 9.87283 14.6564 10.7119 14.1137 11.42C13.9911 11.5669 13.8716 11.7115 13.7628 11.8688C13.7004 12.1932 13.7861 12.3474 13.966 12.6141C14.2804 13.0791 14.416 13.5478 14.4926 14.1032C14.5934 14.9993 14.5723 16.0844 13.9927 16.8163C13.8845 16.947 13.7861 17.0777 13.695 17.2209C13.6415 17.4446 13.6647 17.5634 13.7625 17.7698C14.2755 18.751 14.4241 19.7087 14.3047 20.8116L14.1692 21.2858H15.4565C15.6092 20.2164 15.6246 19.1262 15.2532 18.1016L15.1828 17.9169L15.1219 17.7544L15.0651 17.6226C15.0519 17.5586 15.0448 17.5235 15.0501 17.4905C15.0566 17.4505 15.0814 17.4135 15.1362 17.3318C15.1943 17.2431 15.2236 17.1984 15.2492 17.1518C15.2752 17.1045 15.2975 17.0552 15.3424 16.956C15.8611 15.6438 15.9282 14.0744 15.4183 12.7453L15.4061 12.716C15.3337 12.5424 15.2622 12.3706 15.204 12.1914C15.1892 12.1328 15.1811 12.1008 15.1856 12.0707C15.191 12.0347 15.2144 12.0013 15.2659 11.9281C15.8024 11.0772 15.9343 10.071 15.8439 9.08695C15.7088 8.08931 15.2318 7.07554 14.436 6.44902L14.2388 6.31352C14.1611 6.17326 14.122 6.10274 14.1061 6.02733C14.0901 5.95108 14.098 5.86984 14.1137 5.70644C14.1601 5.31445 14.1798 4.93296 14.1818 4.53832L14.1819 4.30649C14.1909 3.47534 14.106 2.75683 13.7903 1.98322C13.5457 1.44714 13.2471 0.983476 12.6788 0.758202C12.3661 0.718969 12.019 0.681597 11.7303 0.825949C11.1198 1.28795 10.7878 1.80066 10.5656 2.52997L10.5109 2.72289C10.4035 3.08351 10.3504 3.43907 10.3177 3.8132L10.3076 3.94235C9.93657 3.75103 9.55797 3.57883 9.16623 3.43424C8.0722 3.07745 7.00024 3.3833 6.00272 3.86057L5.83627 3.94235C5.84947 3.58589 5.82871 3.25921 5.75158 2.91052ZM3.80383 1.90991H4.00708C4.33115 2.30657 4.49953 2.77324 4.61681 3.26487L4.65888 3.41757C4.7506 3.7914 4.76816 4.16041 4.77347 4.54361L4.77709 4.69513C4.77672 4.98914 4.75524 5.15329 4.54906 5.36505C4.47886 5.38562 4.44208 5.3964 4.4046 5.40343C4.36336 5.41118 4.32128 5.41439 4.2329 5.42115L4.23281 5.42116L4.04955 5.43703L3.85888 5.44974L3.66582 5.46562C3.50863 5.47838 3.35145 5.48998 3.1941 5.50055C3.18729 5.20917 3.18243 4.91784 3.17922 4.62641C3.17787 4.52774 3.17604 4.42906 3.17366 4.33041C3.15372 3.48063 3.19343 2.56727 3.80383 1.90991ZM12.2046 1.90991H12.4078C13.1548 2.82926 13.0975 4.17989 13.0175 5.2973L12.9498 5.50055C12.7393 5.48564 12.5291 5.46795 12.3189 5.44974L12.138 5.43703C11.8611 5.41177 11.7625 5.40277 11.6777 5.36372C11.6308 5.34211 11.5881 5.3113 11.5218 5.26343C11.4243 4.99914 11.4264 4.74704 11.4297 4.46739L11.4311 4.28537C11.4507 3.46741 11.6017 2.51281 12.2046 1.90991Z"
       fill="#FAFAFA"
+      fillRule="evenodd"
     />
     <path
       d="M12.1243 9.46396C12.3546 9.51627 12.5027 9.61403 12.6787 9.76856C12.8518 10.0522 12.8623 10.3252 12.8142 10.6493C12.6748 10.8753 12.5609 10.9763 12.34 11.1235C12.1058 11.1596 11.9417 11.1692 11.7342 11.0444C11.4216 10.7905 11.2914 10.5816 11.2222 10.1835C11.2644 9.91975 11.3519 9.78311 11.5331 9.58993C11.7296 9.44969 11.8881 9.44444 12.1243 9.46396Z"
@@ -325,10 +325,10 @@ export const OllamaLogo: FC = ({ ...props }) => (
 
 export const GroqLogo: FC = ({ ...props }) => (
   <svg
-    width="15"
+    fill="none"
     height="22"
     viewBox="0 0 15 22"
-    fill="none"
+    width="15"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -340,10 +340,10 @@ export const GroqLogo: FC = ({ ...props }) => (
 )
 export const DeepseekLogo: FC = ({ ...props }) => (
   <svg
-    width="20"
+    fill="none"
     height="15"
     viewBox="0 0 20 15"
-    fill="none"
+    width="20"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -356,24 +356,24 @@ export const DeepseekLogo: FC = ({ ...props }) => (
 
 export const CohereLogo: FC = ({ ...props }) => (
   <svg
-    width="18"
+    fill="none"
     height="18"
     viewBox="0 0 18 18"
-    fill="none"
+    width="18"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <path
-      fillRule="evenodd"
       clipRule="evenodd"
       d="M5.8317 10.7281C6.31172 10.7281 7.27175 10.7041 8.61579 10.1521C10.1758 9.50407 13.2479 8.35203 15.48 7.15199C17.0401 6.31196 17.7121 5.20793 17.7121 3.71988C17.7121 1.67981 16.056 -0.000244141 13.992 -0.000244141H5.35169C2.39959 -0.000244141 -0.000488281 2.39983 -0.000488281 5.35193C-0.000488281 8.30403 2.25559 10.7281 5.8317 10.7281Z"
       fill="#FAFAFA"
+      fillRule="evenodd"
     />
     <path
-      fillRule="evenodd"
       clipRule="evenodd"
       d="M7.29541 14.4C7.29541 12.9599 8.15944 11.6399 9.50348 11.0879L12.2156 9.95983C14.9757 8.83179 17.9998 10.8479 17.9998 13.824C17.9998 16.128 16.1277 18.0001 13.8236 18.0001H10.8715C8.90346 18.0001 7.29541 16.392 7.29541 14.4Z"
       fill="#FAFAFA"
+      fillRule="evenodd"
     />
     <path
       d="M3.09561 11.424C1.39156 11.424 -0.000488281 12.816 -0.000488281 14.5201V14.9281C-0.000488281 16.6081 1.39156 18.0002 3.09561 18.0002C4.79967 18.0002 6.19171 16.6081 6.19171 14.9041V14.4961C6.16771 12.816 4.79967 11.424 3.09561 11.424Z"
@@ -383,28 +383,28 @@ export const CohereLogo: FC = ({ ...props }) => (
 )
 export const FireworksLogo: FC = ({ ...props }) => (
   <svg
-    width="22"
+    fill="none"
     height="11"
     viewBox="0 0 22 11"
-    fill="none"
+    width="22"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <path
-      fillRule="evenodd"
       clipRule="evenodd"
       d="M13.5663 0L10.9988 6.22842L8.42884 0H6.78016L9.597 6.80871C9.83063 7.37681 10.3786 7.74377 10.9892 7.74377C11.5997 7.74377 12.1465 7.37681 12.3813 6.81115L15.215 0H13.5663ZM14.6635 9.48953L19.3602 4.68259L18.7195 3.15261L13.5892 8.41306C13.1605 8.85315 13.0377 9.50172 13.2749 10.0698C13.5109 10.633 14.0565 10.9976 14.6647 10.9976L14.6671 11L22 10.9817L21.3593 9.45173L14.6647 9.48953H14.6635ZM2.63981 4.67893L3.28049 3.14895L8.41077 8.4094C8.8395 8.84828 8.96354 9.49928 8.72509 10.0662C8.48905 10.6306 7.9411 10.9939 7.33534 10.9939L0.00240858 10.9768L0 10.9793L0.640683 9.4493L7.33534 9.48709L2.63981 4.67893Z"
       fill="#FAFAFA"
+      fillRule="evenodd"
     />
   </svg>
 )
 
 export const AzureLogo: FC = ({ ...props }) => (
   <svg
-    width="21"
+    fill="none"
     height="17"
     viewBox="0 0 21 17"
-    fill="none"
+    width="21"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -416,10 +416,10 @@ export const AzureLogo: FC = ({ ...props }) => (
 )
 export const XaiLogo: FC = ({ ...props }) => (
   <svg
-    width="22"
+    fill="none"
     height="24"
     viewBox="0 0 22 24"
-    fill="none"
+    width="22"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -443,10 +443,10 @@ export const XaiLogo: FC = ({ ...props }) => (
 )
 export const OpenAILogo: FC = ({ ...props }) => (
   <svg
-    width="22"
+    fill="none"
     height="22"
     viewBox="0 0 22 22"
-    fill="none"
+    width="22"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -459,10 +459,10 @@ export const OpenAILogo: FC = ({ ...props }) => (
 
 export const SheetIcon: FC = ({ ...props }) => (
   <svg
-    width="16"
+    fill="none"
     height="16"
     viewBox="0 0 16 16"
-    fill="none"
+    width="16"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
@@ -477,29 +477,29 @@ export const SheetIcon: FC = ({ ...props }) => (
 
 export const NextjsTag: FC = ({ ...props }) => (
   <svg
-    width="29"
+    fill="none"
     height="30"
     viewBox="12 0 29 30"
-    fill="none"
+    width="29"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <g filter="url(#filter0_dd_2859_5307)">
       <rect
-        x="12.1167"
-        y="2"
-        width="28"
+        fill="#FAFAFA"
         height="28"
         rx="8"
-        fill="#FAFAFA"
         shapeRendering="crispEdges"
+        width="28"
+        x="12.1167"
+        y="2"
       />
       <g clipPath="url(#clip0_2859_5307)">
         <rect
-          width="20"
+          fill="white"
           height="20"
           transform="translate(16.1167 6)"
-          fill="white"
+          width="20"
         />
         <path
           d="M30.9598 24.7533C30.8854 24.7927 30.8917 24.8052 30.9629 24.7689C30.9861 24.7595 31.0055 24.7464 31.0223 24.7308C31.0223 24.7177 31.0223 24.7177 30.9598 24.7533ZM31.1098 24.672C31.0742 24.7014 31.0742 24.7014 31.1167 24.682C31.1392 24.6689 31.1592 24.6564 31.1592 24.6527C31.1592 24.6358 31.1492 24.6395 31.1098 24.672ZM31.2073 24.6133C31.1717 24.6427 31.1717 24.6427 31.2142 24.6233C31.2373 24.6102 31.2567 24.5964 31.2567 24.5933C31.2567 24.5777 31.2467 24.5808 31.2073 24.6133ZM31.3061 24.5552C31.2704 24.5845 31.2704 24.5845 31.3117 24.5645C31.3348 24.552 31.3542 24.5389 31.3542 24.5352C31.3542 24.5195 31.3442 24.5227 31.3061 24.5552ZM31.4392 24.467C31.3711 24.5127 31.3473 24.542 31.4098 24.5095C31.4517 24.4839 31.5229 24.4277 31.5104 24.4277C31.4836 24.4377 31.4611 24.4545 31.4386 24.467H31.4392ZM25.4623 6.00704C25.4167 6.01016 25.2798 6.02266 25.1598 6.03266C22.3173 6.29016 19.6579 7.82016 17.9723 10.177C17.0404 11.4689 16.4354 12.9695 16.2073 14.5452C16.1267 15.0952 16.1167 15.2577 16.1167 16.0033C16.1167 16.7483 16.1267 16.9083 16.2073 17.4583C16.7517 21.2152 19.4242 24.3689 23.0467 25.5377C23.6986 25.7458 24.3817 25.8895 25.1598 25.9777C25.4623 26.0102 26.7704 26.0102 27.0729 25.9777C28.4179 25.8277 29.5536 25.4958 30.6773 24.9227C30.8498 24.8352 30.8823 24.812 30.8592 24.7927C30.3092 24.067 29.7692 23.3408 29.2286 22.6083L27.6304 20.4502L25.6286 17.4845C24.9611 16.492 24.2911 15.502 23.6104 14.5195C23.6036 14.5195 23.5948 15.8377 23.5911 17.4452C23.5842 20.2608 23.5842 20.3752 23.5486 20.4402C23.5129 20.5183 23.4542 20.5833 23.3761 20.6195C23.3142 20.6489 23.2586 20.6552 22.9629 20.6552H22.6248L22.5367 20.6002C22.4817 20.5645 22.4361 20.5152 22.4067 20.457L22.3642 20.3689L22.3673 16.4495L22.3742 12.5302L22.4361 12.452C22.4754 12.4039 22.5242 12.3645 22.5792 12.3352C22.6611 12.2958 22.6936 12.2895 23.0317 12.2895C23.4286 12.2895 23.4942 12.3052 23.5986 12.4195C24.4086 13.627 25.2161 14.8377 26.0104 16.052C27.3098 18.022 29.0836 20.7102 29.9554 22.0289L31.5411 24.4283L31.6192 24.3764C32.3811 23.8683 33.0742 23.2633 33.6723 22.5733C34.9323 21.1308 35.7498 19.3564 36.0267 17.4627C36.1073 16.9127 36.1173 16.7495 36.1173 16.0045C36.1173 15.2589 36.1073 15.0995 36.0267 14.5495C35.4823 10.7927 32.8098 7.63891 29.1873 6.46954C28.5098 6.25516 27.8129 6.10891 27.1073 6.03391C26.9179 6.01454 25.6254 5.99141 25.4629 6.00829L25.4623 6.00704ZM29.5542 12.0552C29.6486 12.1002 29.7198 12.1852 29.7523 12.2827C29.7692 12.3352 29.7723 13.422 29.7692 15.8702L29.7623 19.3852L29.1442 18.4352L28.5223 17.4845V14.9327C28.5223 13.2783 28.5292 12.3508 28.5379 12.3052C28.5673 12.2008 28.6386 12.1133 28.7336 12.0583C28.8111 12.0189 28.8411 12.0158 29.1504 12.0158C29.4398 12.0158 29.4892 12.0189 29.5542 12.0552Z"
@@ -509,25 +509,25 @@ export const NextjsTag: FC = ({ ...props }) => (
     </g>
     <defs>
       <filter
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+        height="52"
         id="filter0_dd_2859_5307"
+        width="52"
         x="0.116699"
         y="0"
-        width="52"
-        height="52"
-        filterUnits="userSpaceOnUse"
-        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
+          result="hardAlpha"
           type="matrix"
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"
         />
         <feMorphology
-          radius="3"
-          operator="erode"
           in="SourceAlpha"
+          operator="erode"
+          radius="3"
           result="effect1_dropShadow_2859_5307"
         />
         <feOffset dy="10" />
@@ -538,20 +538,20 @@ export const NextjsTag: FC = ({ ...props }) => (
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
         />
         <feBlend
-          mode="normal"
           in2="BackgroundImageFix"
+          mode="normal"
           result="effect1_dropShadow_2859_5307"
         />
         <feColorMatrix
           in="SourceAlpha"
+          result="hardAlpha"
           type="matrix"
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"
         />
         <feMorphology
-          radius="4"
-          operator="erode"
           in="SourceAlpha"
+          operator="erode"
+          radius="4"
           result="effect2_dropShadow_2859_5307"
         />
         <feOffset dy="4" />
@@ -562,23 +562,23 @@ export const NextjsTag: FC = ({ ...props }) => (
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
         />
         <feBlend
-          mode="normal"
           in2="effect1_dropShadow_2859_5307"
+          mode="normal"
           result="effect2_dropShadow_2859_5307"
         />
         <feBlend
-          mode="normal"
           in="SourceGraphic"
           in2="effect2_dropShadow_2859_5307"
+          mode="normal"
           result="shape"
         />
       </filter>
       <clipPath id="clip0_2859_5307">
         <rect
-          width="20"
-          height="20"
           fill="white"
+          height="20"
           transform="translate(16.1167 6)"
+          width="20"
         />
       </clipPath>
     </defs>
@@ -587,23 +587,23 @@ export const NextjsTag: FC = ({ ...props }) => (
 
 export const ShadcnTag: FC = ({ ...props }) => (
   <svg
-    width="29"
+    fill="none"
     height="30"
     viewBox="12 0 29 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+    width="29"
     xlinkHref="http://www.w3.org/1999/xlink"
+    xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <g filter="url(#filter0_dd_2859_5310)">
       <rect
-        x="12.1167"
-        y="2"
-        width="28"
+        fill="#FAFAFA"
         height="28"
         rx="8"
-        fill="#FAFAFA"
         shapeRendering="crispEdges"
+        width="28"
+        x="12.1167"
+        y="2"
       />
       <g clipPath="url(#clip0_2859_5310)">
         <path
@@ -614,25 +614,25 @@ export const ShadcnTag: FC = ({ ...props }) => (
     </g>
     <defs>
       <filter
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+        height="52"
         id="filter0_dd_2859_5310"
+        width="52"
         x="0.116699"
         y="0"
-        width="52"
-        height="52"
-        filterUnits="userSpaceOnUse"
-        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
+          result="hardAlpha"
           type="matrix"
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"
         />
         <feMorphology
-          radius="3"
-          operator="erode"
           in="SourceAlpha"
+          operator="erode"
+          radius="3"
           result="effect1_dropShadow_2859_5310"
         />
         <feOffset dy="10" />
@@ -643,20 +643,20 @@ export const ShadcnTag: FC = ({ ...props }) => (
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
         />
         <feBlend
-          mode="normal"
           in2="BackgroundImageFix"
+          mode="normal"
           result="effect1_dropShadow_2859_5310"
         />
         <feColorMatrix
           in="SourceAlpha"
+          result="hardAlpha"
           type="matrix"
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"
         />
         <feMorphology
-          radius="4"
-          operator="erode"
           in="SourceAlpha"
+          operator="erode"
+          radius="4"
           result="effect2_dropShadow_2859_5310"
         />
         <feOffset dy="4" />
@@ -667,37 +667,37 @@ export const ShadcnTag: FC = ({ ...props }) => (
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
         />
         <feBlend
-          mode="normal"
           in2="effect1_dropShadow_2859_5310"
+          mode="normal"
           result="effect2_dropShadow_2859_5310"
         />
         <feBlend
-          mode="normal"
           in="SourceGraphic"
           in2="effect2_dropShadow_2859_5310"
+          mode="normal"
           result="shape"
         />
       </filter>
       <pattern
+        height="1"
         id="pattern0_2859_5310"
         patternContentUnits="objectBoundingBox"
         width="1"
-        height="1"
       >
-        <use xlinkHref="#image0_2859_5310" transform="scale(0.005)" />
+        <use transform="scale(0.005)" xlinkHref="#image0_2859_5310" />
       </pattern>
       <clipPath id="clip0_2859_5310">
         <rect
-          width="20"
-          height="20"
           fill="white"
+          height="20"
           transform="translate(16.1167 6)"
+          width="20"
         />
       </clipPath>
       <image
+        height="200"
         id="image0_2859_5310"
         width="200"
-        height="200"
         xlinkHref="data:image/png;base64,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"
       />
     </defs>
@@ -706,32 +706,32 @@ export const ShadcnTag: FC = ({ ...props }) => (
 
 export const TailwindTag: FC = ({ ...props }) => (
   <svg
-    width="29"
+    fill="none"
     height="30"
     viewBox="12 0 29 30"
-    fill="none"
+    width="29"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <g filter="url(#filter0_dd_2859_5313)">
       <rect
-        x="12.1167"
-        y="2"
-        width="28"
+        fill="#FAFAFA"
         height="28"
         rx="8"
-        fill="#FAFAFA"
         shapeRendering="crispEdges"
+        width="28"
+        x="12.1167"
+        y="2"
       />
-      <rect x="16.1167" y="6" width="20" height="20" rx="5" fill="#18181B" />
+      <rect fill="#18181B" height="20" rx="5" width="20" x="16.1167" y="6" />
       <mask
-        id="mask0_2859_5313"
+        height="8"
         // style="mask-type:luminance"
+        id="mask0_2859_5313"
         maskUnits="userSpaceOnUse"
+        width="13"
         x="20"
         y="12"
-        width="13"
-        height="8"
       >
         <path
           d="M20.1167 12.3999H32.1167V19.5999H20.1167V12.3999Z"
@@ -740,34 +740,34 @@ export const TailwindTag: FC = ({ ...props }) => (
       </mask>
       <g mask="url(#mask0_2859_5313)">
         <path
-          fillRule="evenodd"
           clipRule="evenodd"
           d="M26.1167 12.3999C24.5167 12.3999 23.5167 13.1999 23.1167 14.7999C23.7167 13.9999 24.4167 13.6999 25.2167 13.8999C25.6731 14.0139 25.9994 14.3452 26.3605 14.7117C26.9487 15.3088 27.6296 15.9999 29.1167 15.9999C30.7167 15.9999 31.7167 15.1999 32.1167 13.5999C31.5167 14.3999 30.8167 14.6999 30.0167 14.4999C29.5603 14.3859 29.234 14.0546 28.8729 13.6881C28.2847 13.091 27.6038 12.3999 26.1167 12.3999ZM23.1167 15.9999C21.5167 15.9999 20.5167 16.7999 20.1167 18.3999C20.7167 17.5999 21.4167 17.2999 22.2167 17.4999C22.6731 17.6141 22.9994 17.9452 23.3605 18.3117C23.9487 18.9088 24.6296 19.5999 26.1167 19.5999C27.7167 19.5999 28.7167 18.7999 29.1167 17.1999C28.5167 17.9999 27.8167 18.2999 27.0167 18.0999C26.5603 17.9859 26.234 17.6546 25.8729 17.2881C25.2847 16.691 24.6038 15.9999 23.1167 15.9999Z"
           fill="#FAFAFA"
+          fillRule="evenodd"
         />
       </g>
     </g>
     <defs>
       <filter
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+        height="52"
         id="filter0_dd_2859_5313"
+        width="52"
         x="0.116699"
         y="0"
-        width="52"
-        height="52"
-        filterUnits="userSpaceOnUse"
-        colorInterpolationFilters="sRGB"
       >
         <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
+          result="hardAlpha"
           type="matrix"
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"
         />
         <feMorphology
-          radius="3"
-          operator="erode"
           in="SourceAlpha"
+          operator="erode"
+          radius="3"
           result="effect1_dropShadow_2859_5313"
         />
         <feOffset dy="10" />
@@ -778,20 +778,20 @@ export const TailwindTag: FC = ({ ...props }) => (
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
         />
         <feBlend
-          mode="normal"
           in2="BackgroundImageFix"
+          mode="normal"
           result="effect1_dropShadow_2859_5313"
         />
         <feColorMatrix
           in="SourceAlpha"
+          result="hardAlpha"
           type="matrix"
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"
         />
         <feMorphology
-          radius="4"
-          operator="erode"
           in="SourceAlpha"
+          operator="erode"
+          radius="4"
           result="effect2_dropShadow_2859_5313"
         />
         <feOffset dy="4" />
@@ -802,14 +802,14 @@ export const TailwindTag: FC = ({ ...props }) => (
           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
         />
         <feBlend
-          mode="normal"
           in2="effect1_dropShadow_2859_5313"
+          mode="normal"
           result="effect2_dropShadow_2859_5313"
         />
         <feBlend
-          mode="normal"
           in="SourceGraphic"
           in2="effect2_dropShadow_2859_5313"
+          mode="normal"
           result="shape"
         />
       </filter>
@@ -820,30 +820,30 @@ export const TailwindTag: FC = ({ ...props }) => (
 export const AgnoTag: FC = ({ ...props }) => {
   return (
     <svg
-      width="101"
+      fill="none"
       height="56"
       viewBox="0 0 101 56"
-      fill="none"
+      width="101"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <g filter="url(#filter0_dd_2859_5300)">
         <rect
-          x="11.6504"
-          y="6.56763"
-          width="76"
+          fill="#FAFAFA"
           height="28"
           rx="8"
-          transform="rotate(-3.82708 11.6504 6.56763)"
-          fill="#FAFAFA"
           shapeRendering="geometricPrecision"
+          transform="rotate(-3.82708 11.6504 6.56763)"
+          width="76"
+          x="11.6504"
+          y="6.56763"
         />
         <g clipPath="url(#clip0_2859_5300)">
           <path
-            fillRule="evenodd"
             clipRule="evenodd"
             d="M35.7024 11.2754C36.1945 12.1001 36.2693 13.2177 36.4188 15.4529L36.8994 22.6374C37.0489 24.8726 37.1237 25.9902 36.7458 26.8731C36.4134 27.6496 35.8437 28.301 35.1183 28.7339C34.2937 29.226 33.1761 29.3008 30.9408 29.4503L23.7563 29.9309C21.5211 30.0804 20.4035 30.1552 19.5207 29.7773C18.7441 29.4449 18.0927 28.8752 17.6598 28.1498C17.1677 27.3252 17.0929 26.2076 16.9434 23.9724L16.4628 16.7878C16.3133 14.5526 16.2385 13.435 16.6164 12.5522C16.9488 11.7756 17.5185 11.1242 18.2439 10.6913C19.0686 10.1992 20.1862 10.1245 22.4214 9.97493L29.6059 9.49432C31.8411 9.3448 32.9587 9.27004 33.8416 9.64793C34.6181 9.98033 35.2695 10.55 35.7024 11.2754ZM22.802 14.5601L27.829 14.2239L32.6254 24.3203L30.5336 24.4602L26.7197 16.0701L22.92 16.3243L22.802 14.5601ZM20.5341 23.3571L25.6815 23.0127L25.7995 24.7769L20.6521 25.1212L20.5341 23.3571Z"
             fill="#FF4017"
+            fillRule="evenodd"
           />
         </g>
         <path
@@ -853,25 +853,25 @@ export const AgnoTag: FC = ({ ...props }) => {
       </g>
       <defs>
         <filter
+          colorInterpolationFilters="sRGB"
+          filterUnits="userSpaceOnUse"
+          height="57.0103"
           id="filter0_dd_2859_5300"
+          width="101.699"
           x="-0.349609"
           y="-0.505127"
-          width="101.699"
-          height="57.0103"
-          filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
+            result="hardAlpha"
             type="matrix"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
           />
           <feMorphology
-            radius="2"
-            operator="erode"
             in="SourceAlpha"
+            operator="erode"
+            radius="2"
             result="effect1_dropShadow_2859_5300"
           />
           <feOffset dy="8" />
@@ -882,20 +882,20 @@ export const AgnoTag: FC = ({ ...props }) => {
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
           />
           <feBlend
-            mode="normal"
             in2="BackgroundImageFix"
+            mode="normal"
             result="effect1_dropShadow_2859_5300"
           />
           <feColorMatrix
             in="SourceAlpha"
+            result="hardAlpha"
             type="matrix"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
           />
           <feMorphology
-            radius="3"
-            operator="erode"
             in="SourceAlpha"
+            operator="erode"
+            radius="3"
             result="effect2_dropShadow_2859_5300"
           />
           <feOffset dy="3" />
@@ -906,23 +906,23 @@ export const AgnoTag: FC = ({ ...props }) => {
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
           />
           <feBlend
-            mode="normal"
             in2="effect1_dropShadow_2859_5300"
+            mode="normal"
             result="effect2_dropShadow_2859_5300"
           />
           <feBlend
-            mode="normal"
             in="SourceGraphic"
             in2="effect2_dropShadow_2859_5300"
+            mode="normal"
             result="shape"
           />
         </filter>
         <clipPath id="clip0_2859_5300">
           <rect
-            width="20"
-            height="20"
             fill="white"
+            height="20"
             transform="translate(15.9087 10.2917) rotate(-3.82708)"
+            width="20"
           />
         </clipPath>
       </defs>
@@ -932,14 +932,14 @@ export const AgnoTag: FC = ({ ...props }) => {
 
 export const ReasoningIcon: FC = ({ ...props }) => (
   <svg
-    width="24"
+    fill="none"
     height="24"
     viewBox="0 0 24 24"
-    fill="none"
+    width="24"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <rect width="24" height="24" rx="6" fill="#27272A" />
+    <rect fill="#27272A" height="24" rx="6" width="24" />
     <g clipPath="url(#clip0_8154_2999)">
       <path
         d="M11.9999 7.00004C11.9999 6.78117 11.9568 6.56445 11.873 6.36224C11.7893 6.16003 11.6665 5.97629 11.5117 5.82153C11.357 5.66677 11.1732 5.544 10.971 5.46024C10.7688 5.37648 10.5521 5.33337 10.3332 5.33337C9.94409 5.33296 9.56708 5.46871 9.26754 5.71711C8.968 5.96551 8.76483 6.31089 8.69323 6.69337C8.47346 6.73455 8.26423 6.81952 8.07798 6.94323C7.89174 7.06694 7.73229 7.22686 7.60912 7.41347C7.48596 7.60008 7.40161 7.80956 7.36108 8.02944C7.32055 8.24933 7.32468 8.47512 7.37322 8.69338C7.07233 8.74679 6.79192 8.88191 6.56264 9.08395C6.33336 9.28599 6.16405 9.54718 6.07321 9.83897C5.98237 10.1308 5.97351 10.4419 6.04758 10.7384C6.12166 11.0349 6.27583 11.3053 6.49323 11.52C6.12758 11.6889 5.82141 11.9641 5.6148 12.3098C5.40819 12.6555 5.31075 13.0555 5.33525 13.4575C5.35974 13.8595 5.50502 14.2447 5.75208 14.5628C5.99914 14.8808 6.33646 15.1169 6.71989 15.24C6.64668 15.5166 6.6459 15.8074 6.71762 16.0843C6.78933 16.3613 6.93114 16.6151 7.12938 16.8214C7.32762 17.0277 7.57562 17.1795 7.84951 17.2621C8.12341 17.3448 8.41397 17.3555 8.69323 17.2934C8.76732 17.7026 8.99176 18.0694 9.32246 18.3216C9.65316 18.5739 10.0662 18.6933 10.4805 18.6566C10.8948 18.6198 11.2804 18.4295 11.5615 18.123C11.8426 17.8165 11.999 17.416 11.9999 17M11.9999 7.00004V17M11.9999 7.00004C11.9999 6.55801 12.1755 6.13409 12.488 5.82153C12.8006 5.50897 13.2245 5.33337 13.6666 5.33337C14.0557 5.33296 14.4327 5.46871 14.7322 5.71711C15.0318 5.96551 15.235 6.31089 15.3066 6.69337C15.5263 6.73455 15.7356 6.81952 15.9218 6.94323C16.108 7.06694 16.2675 7.22686 16.3907 7.41347C16.5138 7.60008 16.5982 7.80956 16.6387 8.02944C16.6792 8.24933 16.6751 8.47512 16.6266 8.69338C16.9275 8.74679 17.2079 8.88191 17.4371 9.08395C17.6664 9.28599 17.8357 9.54718 17.9266 9.83897C18.0174 10.1308 18.0263 10.4419 17.9522 10.7384C17.8781 11.0349 17.724 11.3053 17.5066 11.52C17.8722 11.6889 18.1784 11.9641 18.385 12.3098C18.5916 12.6555 18.689 13.0555 18.6645 13.4575C18.64 13.8595 18.4948 14.2447 18.2477 14.5628C18.0006 14.8808 17.6633 15.1169 17.2799 15.24C17.3531 15.5166 17.3539 15.8074 17.2822 16.0843C17.2105 16.3613 17.0686 16.6151 16.8704 16.8214C16.6722 17.0277 16.4242 17.1795 16.1503 17.2621C15.8764 17.3448 15.5858 17.3555 15.3066 17.2934C15.2325 17.7026 15.008 18.0694 14.6773 18.3216C14.3466 18.5739 13.9336 18.6933 13.5193 18.6566C13.105 18.6198 12.7194 18.4295 12.4383 18.123C12.1572 17.8165 12.0008 17.416 11.9999 17"
@@ -950,7 +950,7 @@ export const ReasoningIcon: FC = ({ ...props }) => (
     </g>
     <defs>
       <clipPath id="clip0_8154_2999">
-        <rect width="16" height="16" fill="white" transform="translate(4 4)" />
+        <rect fill="white" height="16" transform="translate(4 4)" width="16" />
       </clipPath>
     </defs>
   </svg>
@@ -958,14 +958,14 @@ export const ReasoningIcon: FC = ({ ...props }) => (
 
 export const ReferencesIcon: FC = ({ ...props }) => (
   <svg
-    width="24"
+    fill="none"
     height="24"
     viewBox="0 0 24 24"
-    fill="none"
+    width="24"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <rect width="24" height="24" rx="6" fill="#27272A" />
+    <rect fill="#27272A" height="24" rx="6" width="24" />
     <g clipPath="url(#clip0_8556_11986)">
       <path
         d="M10.6667 17.5089C8.60809 17.0124 6.9877 15.392 6.49124 13.3333M17.5092 13.3334C17.0127 15.392 15.3923 17.0124 13.3338 17.5089M13.3336 6.49109C15.3923 6.98757 17.0127 8.60799 17.5092 10.6666M6.49137 10.6667C6.98784 8.60803 8.60829 6.98757 10.667 6.49109M6.40016 13.3334H6.9335C7.30686 13.3334 7.49355 13.3334 7.63616 13.2607C7.7616 13.1968 7.86358 13.0948 7.9275 12.9694C8.00016 12.8268 8.00016 12.6401 8.00016 12.2667V11.7334C8.00016 11.36 8.00016 11.1733 7.9275 11.0307C7.86358 10.9053 7.7616 10.8033 7.63616 10.7394C7.49355 10.6667 7.30686 10.6667 6.9335 10.6667H6.40016C6.02679 10.6667 5.84011 10.6667 5.6975 10.7394C5.57206 10.8033 5.47007 10.9053 5.40616 11.0307C5.3335 11.1733 5.3335 11.36 5.3335 11.7334V12.2667C5.3335 12.6401 5.3335 12.8268 5.40616 12.9694C5.47007 13.0948 5.57206 13.1968 5.6975 13.2607C5.84011 13.3334 6.02679 13.3334 6.40016 13.3334ZM17.0668 13.3334H17.6002C17.9735 13.3334 18.1602 13.3334 18.3028 13.2607C18.4283 13.1968 18.5303 13.0948 18.5942 12.9694C18.6668 12.8268 18.6668 12.6401 18.6668 12.2667V11.7334C18.6668 11.36 18.6668 11.1733 18.5942 11.0307C18.5303 10.9053 18.4283 10.8033 18.3028 10.7394C18.1602 10.6667 17.9735 10.6667 17.6002 10.6667H17.0668C16.6935 10.6667 16.5068 10.6667 16.3642 10.7394C16.2387 10.8033 16.1367 10.9053 16.0728 11.0307C16.0002 11.1733 16.0002 11.36 16.0002 11.7334V12.2667C16.0002 12.6401 16.0002 12.8268 16.0728 12.9694C16.1367 13.0948 16.2387 13.1968 16.3642 13.2607C16.5068 13.3334 16.6935 13.3334 17.0668 13.3334ZM11.7335 8.00004H12.2668C12.6402 8.00004 12.8269 8.00004 12.9695 7.92738C13.0949 7.86346 13.1969 7.76148 13.2608 7.63603C13.3335 7.49343 13.3335 7.30674 13.3335 6.93337V6.40004C13.3335 6.02667 13.3335 5.83999 13.2608 5.69738C13.1969 5.57194 13.0949 5.46995 12.9695 5.40604C12.8269 5.33337 12.6402 5.33337 12.2668 5.33337H11.7335C11.3601 5.33337 11.1734 5.33337 11.0308 5.40604C10.9054 5.46995 10.8034 5.57194 10.7395 5.69738C10.6668 5.83999 10.6668 6.02667 10.6668 6.40004V6.93337C10.6668 7.30674 10.6668 7.49343 10.7395 7.63603C10.8034 7.76148 10.9054 7.86346 11.0308 7.92738C11.1734 8.00004 11.3601 8.00004 11.7335 8.00004ZM11.7335 18.6667H12.2668C12.6402 18.6667 12.8269 18.6667 12.9695 18.594C13.0949 18.5301 13.1969 18.4281 13.2608 18.3027C13.3335 18.1601 13.3335 17.9734 13.3335 17.6V17.0667C13.3335 16.6933 13.3335 16.5067 13.2608 16.364C13.1969 16.2386 13.0949 16.1366 12.9695 16.0727C12.8269 16 12.6402 16 12.2668 16H11.7335C11.3601 16 11.1734 16 11.0308 16.0727C10.9054 16.1366 10.8034 16.2386 10.7395 16.364C10.6668 16.5067 10.6668 16.6933 10.6668 17.0667V17.6C10.6668 17.9734 10.6668 18.1601 10.7395 18.3027C10.8034 18.4281 10.9054 18.5301 11.0308 18.594C11.1734 18.6667 11.3601 18.6667 11.7335 18.6667Z"
@@ -976,7 +976,7 @@ export const ReferencesIcon: FC = ({ ...props }) => (
     </g>
     <defs>
       <clipPath id="clip0_8556_11986">
-        <rect width="16" height="16" fill="white" transform="translate(4 4)" />
+        <rect fill="white" height="16" transform="translate(4 4)" width="16" />
       </clipPath>
     </defs>
   </svg>

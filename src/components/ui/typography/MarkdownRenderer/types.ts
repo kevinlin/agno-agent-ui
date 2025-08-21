@@ -1,11 +1,11 @@
-import {
-  type HTMLAttributes,
-  type DetailedHTMLProps,
-  type OlHTMLAttributes,
-  type DelHTMLAttributes,
-  type BlockquoteHTMLAttributes,
-  type AnchorHTMLAttributes,
-  type ImgHTMLAttributes
+import type {
+  AnchorHTMLAttributes,
+  BlockquoteHTMLAttributes,
+  DelHTMLAttributes,
+  DetailedHTMLProps,
+  HTMLAttributes,
+  ImgHTMLAttributes,
+  OlHTMLAttributes
 } from 'react'
 
 interface MarkdownRendererProps {

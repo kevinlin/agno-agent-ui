@@ -1,17 +1,17 @@
 import { useCallback } from 'react'
-import {
-  getPlaygroundSessionAPI,
-  getAllPlaygroundSessionsAPI
-} from '@/api/playground'
-import { usePlaygroundStore } from '../store'
 import { toast } from 'sonner'
 import {
-  PlaygroundChatMessage,
-  ToolCall,
-  ReasoningMessage,
-  ChatEntry
-} from '@/types/playground'
+  getAllPlaygroundSessionsAPI,
+  getPlaygroundSessionAPI
+} from '@/api/playground'
 import { getJsonMarkdown } from '@/lib/utils'
+import type {
+  ChatEntry,
+  PlaygroundChatMessage,
+  ReasoningMessage,
+  ToolCall
+} from '@/types/playground'
+import { usePlaygroundStore } from '../store'
 
 interface SessionResponse {
   session_id: string
@@ -35,7 +35,7 @@ const useSessionLoader = () => {
 
   const getSessions = useCallback(
     async (agentId: string) => {
-      if (!agentId || !selectedEndpoint) return
+      if (!(agentId && selectedEndpoint)) return
       try {
         setIsSessionsLoading(true)
         const sessions = await getAllPlaygroundSessionsAPI(
@@ -54,7 +54,7 @@ const useSessionLoader = () => {
 
   const getSession = useCallback(
     async (sessionId: string, agentId: string) => {
-      if (!sessionId || !agentId || !selectedEndpoint) {
+      if (!(sessionId && agentId && selectedEndpoint)) {
         return null
       }
 

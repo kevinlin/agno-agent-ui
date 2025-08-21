@@ -76,19 +76,19 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           'px-3 py-2',
           'text-sm leading-5',
           'placeholder:text-muted-foreground',
-          'focus-visible:ring-0.5 focus-visible:ring-ring focus-visible:border-primary/50 focus-visible:outline-none',
+          'focus-visible:border-primary/50 focus-visible:outline-none focus-visible:ring-0.5 focus-visible:ring-ring',
           'disabled:cursor-not-allowed disabled:opacity-50',
           showScroll ? 'overflow-y-auto' : 'overflow-hidden',
           className
         )}
+        onChange={handleChange}
+        ref={handleRef}
         style={{
           minHeight: `${MIN_HEIGHT}px`,
           height: `${MIN_HEIGHT}px`,
           maxHeight: `${MAX_HEIGHT}px`
         }}
-        ref={handleRef}
         value={value}
-        onChange={handleChange}
         {...props}
       />
     )

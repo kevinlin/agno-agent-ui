@@ -1,30 +1,27 @@
 'use client'
 
-import { useState } from 'react'
-
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 import { cn } from '@/lib/utils'
-
+import { PARAGRAPH_SIZES } from '../Paragraph/constants'
 import type {
-  UnorderedListProps,
-  OrderedListProps,
-  EmphasizedTextProps,
-  ItalicTextProps,
-  StrongTextProps,
+  AnchorLinkProps,
+  BlockquoteProps,
   BoldTextProps,
   DeletedTextProps,
-  UnderlinedTextProps,
-  HorizontalRuleProps,
-  BlockquoteProps,
-  AnchorLinkProps,
+  EmphasizedTextProps,
   HeadingProps,
+  HorizontalRuleProps,
   ImgProps,
-  ParagraphProps
+  ItalicTextProps,
+  OrderedListProps,
+  ParagraphProps,
+  StrongTextProps,
+  UnderlinedTextProps,
+  UnorderedListProps
 } from './types'
-
-import { PARAGRAPH_SIZES } from '../Paragraph/constants'
 
 const filterProps = (props: object) => {
   const newProps = { ...props }
@@ -103,7 +100,7 @@ const DeletedText = ({ className, ...props }: DeletedTextProps) => (
 
 const HorizontalRule = ({ className, ...props }: HorizontalRuleProps) => (
   <hr
-    className={cn(className, 'mx-auto w-48 border-b border-border')}
+    className={cn(className, 'mx-auto w-48 border-border border-b')}
     {...filterProps(props)}
   />
 )
@@ -118,8 +115,8 @@ const Blockquote = ({ className, ...props }: BlockquoteProps) => (
 const AnchorLink = ({ className, ...props }: AnchorLinkProps) => (
   <a
     className={cn(className, 'cursor-pointer text-xs underline')}
-    target="_blank"
     rel="noopener noreferrer"
+    target="_blank"
     {...filterProps(props)}
   />
 )
@@ -159,22 +156,22 @@ const Img = ({ src, alt }: ImgProps) => {
         <div className="flex h-40 flex-col items-center justify-center gap-2 rounded-md bg-secondary/50 text-muted">
           <Paragraph className="text-primary">Image unavailable</Paragraph>
           <Link
+            className="max-w-md truncate underline"
             href={src}
             target="_blank"
-            className="max-w-md truncate underline"
           >
             {src}
           </Link>
         </div>
       ) : (
         <Image
-          src={src}
-          width={96}
-          height={56}
           alt={alt ?? 'Rendered image'}
           className="size-full rounded-md object-cover"
+          height={56}
           onError={() => setError(true)}
+          src={src}
           unoptimized
+          width={96}
         />
       )}
     </div>

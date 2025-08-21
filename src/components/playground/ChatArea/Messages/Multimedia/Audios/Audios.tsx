@@ -1,9 +1,8 @@
 'use client'
 
 import { memo, useMemo } from 'react'
-
-import { type AudioData } from '@/types/playground'
 import { decodeBase64Audio } from '@/lib/audio'
+import type { AudioData } from '@/types/playground'
 
 /**
  * Renders a single audio item with controls
@@ -35,10 +34,10 @@ const AudioItem = memo(({ audio }: { audio: AudioData }) => {
 
   return (
     <audio
-      src={audioUrl}
-      controls
       className="w-full rounded-lg"
+      controls
       preload="metadata"
+      src={audioUrl}
     />
   )
 })
@@ -53,7 +52,7 @@ const Audios = memo(({ audio }: { audio: AudioData[] }) => (
   <div className="flex flex-col gap-4">
     {audio.map((audio_item, index) => (
       // TODO :: find a better way to handle the key
-      <AudioItem key={audio_item.id ?? `audio-${index}`} audio={audio_item} />
+      <AudioItem audio={audio_item} key={audio_item.id ?? `audio-${index}`} />
     ))}
   </div>
 ))

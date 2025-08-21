@@ -1,18 +1,22 @@
 'use client'
 
-import { useEffect, useMemo, useState, useRef, useCallback } from 'react'
 import dayjs from 'dayjs'
 import utc from 'dayjs/plugin/utc'
-
-import { usePlaygroundStore } from '@/store'
 import { useQueryState } from 'nuqs'
-import SessionItem from './SessionItem'
-import SessionBlankState from './SessionBlankState'
-import useSessionLoader from '@/hooks/useSessionLoader'
-
-import { cn } from '@/lib/utils'
-import { FC } from 'react'
+import {
+  type FC,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState
+} from 'react'
 import { Skeleton } from '@/components/ui/skeleton'
+import useSessionLoader from '@/hooks/useSessionLoader'
+import { cn } from '@/lib/utils'
+import { usePlaygroundStore } from '@/store'
+import SessionBlankState from './SessionBlankState'
+import SessionItem from './SessionItem'
 
 interface SkeletonListProps {
   skeletonCount: number
@@ -26,11 +30,11 @@ const SkeletonList: FC<SkeletonListProps> = ({ skeletonCount }) => {
 
   return skeletons.map((skeleton, index) => (
     <Skeleton
-      key={skeleton}
       className={cn(
         'mb-1 h-11 rounded-lg px-3 py-2',
         index > 0 && 'bg-background-secondary'
       )}
+      key={skeleton}
     />
   ))
 }
@@ -100,7 +104,7 @@ const Sessions = () => {
   }, [hydrated])
 
   useEffect(() => {
-    if (!selectedEndpoint || !agentId || !hasStorage) {
+    if (!(selectedEndpoint && agentId && hasStorage)) {
       setSessionsData(() => null)
       return
     }
@@ -124,7 +128,7 @@ const Sessions = () => {
   }, [sessionId])
 
   const formattedSessionsData = useMemo(() => {
-    if (!sessionsData || !Array.isArray(sessionsData)) return []
+    if (!(sessionsData && Array.isArray(sessionsData))) return []
 
     return sessionsData.map((entry) => ({
       ...entry,
@@ -141,7 +145,7 @@ const Sessions = () => {
   if (isSessionsLoading || isEndpointLoading)
     return (
       <div className="w-full">
-        <div className="mb-2 text-xs font-medium uppercase">Sessions</div>
+        <div className="mb-2 font-medium text-xs uppercase">Sessions</div>
         <div className="mt-4 h-[calc(100vh-325px)] w-full overflow-y-auto">
           <SkeletonList skeletonCount={5} />
         </div>
@@ -149,15 +153,14 @@ const Sessions = () => {
     )
   return (
     <div className="w-full">
-      <div className="mb-2 w-full text-xs font-medium uppercase">Sessions</div>
+      <div className="mb-2 w-full font-medium text-xs uppercase">Sessions</div>
       <div
         className={`h-[calc(100vh-345px)] overflow-y-auto font-geist transition-all duration-300 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar]:transition-opacity [&::-webkit-scrollbar]:duration-300 ${isScrolling ? '[&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-background [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:opacity-0' : '[&::-webkit-scrollbar]:opacity-100'}`}
-        onScroll={handleScroll}
-        onMouseOver={() => setIsScrolling(true)}
         onMouseLeave={handleScroll}
+        onMouseOver={() => setIsScrolling(true)}
+        onScroll={handleScroll}
       >
-        {!isEndpointActive ||
-        !hasStorage ||
+        {!(isEndpointActive && hasStorage) ||
         (!isSessionsLoading && (!sessionsData || sessionsData.length === 0)) ? (
           <SessionBlankState />
         ) : (

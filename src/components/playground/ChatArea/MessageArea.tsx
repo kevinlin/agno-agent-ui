@@ -1,9 +1,9 @@
 'use client'
 
+import { StickToBottom } from 'use-stick-to-bottom'
+import ScrollToBottom from '@/components/playground/ChatArea/ScrollToBottom'
 import { usePlaygroundStore } from '@/store'
 import Messages from './Messages'
-import ScrollToBottom from '@/components/playground/ChatArea/ScrollToBottom'
-import { StickToBottom } from 'use-stick-to-bottom'
 
 const MessageArea = () => {
   const { messages } = usePlaygroundStore()
@@ -11,8 +11,8 @@ const MessageArea = () => {
   return (
     <StickToBottom
       className="relative mb-4 flex max-h-[calc(100vh-64px)] min-h-0 flex-grow flex-col"
-      resize="smooth"
       initial="smooth"
+      resize="smooth"
     >
       <StickToBottom.Content className="flex min-h-full flex-col justify-center">
         <div className="mx-auto w-full max-w-2xl space-y-9 px-4 pb-4 lg:max-w-4xl xl:max-w-6xl">

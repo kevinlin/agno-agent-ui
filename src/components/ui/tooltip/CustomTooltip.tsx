@@ -1,9 +1,9 @@
-import { type FC } from 'react'
+import type { FC } from 'react'
 
 import {
-  TooltipProvider,
   Tooltip as BaseTooltip,
   TooltipContent,
+  TooltipProvider,
   TooltipTrigger
 } from '@/components/ui/tooltip/tooltip'
 
@@ -20,7 +20,7 @@ const Tooltip: FC<TooltipProps> = ({
   <TooltipProvider delayDuration={delayDuration}>
     <BaseTooltip>
       <TooltipTrigger className={className}>{children}</TooltipTrigger>
-      <TooltipContent side={side} className={contentClassName}>
+      <TooltipContent className={contentClassName} side={side}>
         {content}
       </TooltipContent>
     </BaseTooltip>

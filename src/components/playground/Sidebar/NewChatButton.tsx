@@ -11,12 +11,12 @@ function NewChatButton() {
   return (
     <Button
       className="z-10 cursor-pointer rounded bg-brand px-4 py-2 font-bold text-primary hover:bg-brand/80 disabled:cursor-not-allowed disabled:opacity-50"
-      onClick={clearChat}
       disabled={messages.length === 0}
+      onClick={clearChat}
     >
       <div className="flex items-center gap-2">
         <p>New Chat</p>{' '}
-        <Icon type="plus-icon" size="xs" className="text-background" />
+        <Icon className="text-background" size="xs" type="plus-icon" />
       </div>
     </Button>
   )

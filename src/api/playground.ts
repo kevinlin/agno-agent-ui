@@ -1,8 +1,6 @@
 import { toast } from 'sonner'
-
+import type { Agent, ComboboxAgent, SessionEntry } from '@/types/playground'
 import { APIRoutes } from './routes'
-
-import { Agent, ComboboxAgent, SessionEntry } from '@/types/playground'
 
 export const getPlaygroundAgentsAPI = async (
   endpoint: string
@@ -20,7 +18,7 @@ export const getPlaygroundAgentsAPI = async (
       value: item.agent_id || '',
       label: item.name || '',
       model: item.model || '',
-      storage: item.storage || false
+      storage: item.storage
     }))
     return agents
   } catch {

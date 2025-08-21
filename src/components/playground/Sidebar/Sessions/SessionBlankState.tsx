@@ -1,14 +1,14 @@
+import Link from 'next/link'
+import { useQueryState } from 'nuqs'
 import React from 'react'
 import { usePlaygroundStore } from '@/store'
-import { useQueryState } from 'nuqs'
-import Link from 'next/link'
 
 const HistoryBlankStateIcon = () => (
   <svg
-    width="90"
+    fill="none"
     height="89"
     viewBox="0 0 90 89"
-    fill="none"
+    width="90"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -23,16 +23,16 @@ const HistoryBlankStateIcon = () => (
     />
     <g clipPath="url(#clip1_9008_17675)">
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M59.8503 32.7422C59.5795 32.6962 59.3962 32.4446 59.4409 32.1802C59.6051 31.2079 60.0017 30.4826 60.7415 30.1543C61.4471 29.8413 62.3116 29.9643 63.221 30.2791C63.4804 30.3689 63.6182 30.6467 63.5286 30.8995C63.4391 31.1524 63.1562 31.2846 62.8968 31.1948C62.0492 30.9014 61.5019 30.8876 61.1589 31.0398C60.8501 31.1768 60.5613 31.519 60.4215 32.3469C60.3768 32.6112 60.1211 32.7882 59.8503 32.7422Z"
         fill="white"
+        fillRule="evenodd"
       />
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M70.6365 34.8074C70.9052 34.8646 71.1684 34.6985 71.2246 34.4363C71.431 33.4721 71.3304 32.6517 70.7641 32.0734C70.224 31.5218 69.3752 31.3169 68.4138 31.2736C68.1395 31.2612 67.909 31.4685 67.8988 31.7365C67.8886 32.0046 68.1026 32.2319 68.3769 32.2443C69.2729 32.2847 69.7866 32.474 70.0492 32.7421C70.2855 32.9835 70.4276 33.4081 70.2518 34.2291C70.1956 34.4912 70.3679 34.7502 70.6365 34.8074Z"
         fill="white"
+        fillRule="evenodd"
       />
       <path
         d="M63.6581 36.939C63.5614 37.4443 63.0733 37.7755 62.5681 37.6787C62.0628 37.582 61.7316 37.094 61.8283 36.5887C61.925 36.0834 62.413 35.7522 62.9183 35.849C63.4236 35.9457 63.7548 36.4337 63.6581 36.939Z"
@@ -43,16 +43,16 @@ const HistoryBlankStateIcon = () => (
         fill="white"
       />
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M69.4411 41.0527C69.7119 41.0986 69.8945 41.3539 69.8489 41.6229C69.6814 42.6122 69.2823 43.351 68.5409 43.6873C67.8339 44.0079 66.9693 43.8856 66.0603 43.5684C65.801 43.478 65.6641 43.1959 65.7545 42.9385C65.8449 42.6811 66.1284 42.5457 66.3877 42.6362C67.2348 42.9318 67.7825 42.944 68.1262 42.7881C68.4356 42.6478 68.7257 42.2989 68.8683 41.4566C68.9138 41.1876 69.1703 41.0068 69.4411 41.0527Z"
         fill="white"
+        fillRule="evenodd"
       />
       <path
-        fillRule="evenodd"
         clipRule="evenodd"
         d="M58.6548 38.9885C58.3862 38.9312 58.1223 39.101 58.0652 39.3678C57.8555 40.349 57.9536 41.183 58.5184 41.7692C59.057 42.3283 59.9057 42.534 60.8675 42.5749C61.1419 42.5866 61.3733 42.3751 61.3844 42.1025C61.3954 41.8298 61.182 41.5994 60.9076 41.5877C60.0112 41.5495 59.4977 41.3586 59.2359 41.0868C59.0002 40.8422 58.8594 40.4108 59.038 39.5754C59.095 39.3086 58.9234 39.0458 58.6548 38.9885Z"
         fill="white"
+        fillRule="evenodd"
       />
     </g>
     <path
@@ -76,10 +76,10 @@ const HistoryBlankStateIcon = () => (
     <defs>
       <clipPath id="clip0_7378_12246">
         <rect
-          width="16"
-          height="16"
           fill="white"
+          height="16"
           transform="translate(13.8438 47.6617) rotate(-8.33)"
+          width="16"
         />
       </clipPath>
     </defs>
@@ -119,12 +119,12 @@ const SessionBlankState = () => {
   })()
 
   return (
-    <div className="mt-1 flex items-center justify-center rounded-lg bg-background-secondary/50 pb-6 pt-4">
+    <div className="mt-1 flex items-center justify-center rounded-lg bg-background-secondary/50 pt-4 pb-6">
       <div className="flex flex-col items-center gap-1">
         <HistoryBlankStateIcon />
         <div className="flex flex-col items-center gap-2">
-          <h3 className="text-sm font-medium text-primary">No Session found</h3>
-          <p className="max-w-[210px] text-center text-sm text-muted">
+          <h3 className="font-medium text-primary text-sm">No Session found</h3>
+          <p className="max-w-[210px] text-center text-muted text-sm">
             {errorMessage}
           </p>
         </div>

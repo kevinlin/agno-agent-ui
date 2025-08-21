@@ -1,4 +1,4 @@
-import { IconType } from '@/components/ui/icon'
+import type { IconType } from '@/components/ui/icon'
 
 const PROVIDER_ICON_MAP: Record<string, IconType> = {
   aws: 'aws',

@@ -1,7 +1,7 @@
 export function decodeBase64Audio(
   base64String: string,
   mimeType = 'audio/mpeg',
-  sampleRate = 44100,
+  sampleRate = 44_100,
   numChannels = 1
 ): string {
   // Convert the Base64 string to binary
@@ -42,12 +42,12 @@ function createWavHeader(
   const byteRate = sampleRate * blockAlign
 
   // "RIFF" chunk descriptor
-  view.setUint32(0, 0x52494646, false) // "RIFF"
+  view.setUint32(0, 0x52_49_46_46, false) // "RIFF"
   view.setUint32(4, 36 + dataLength, true) // File size
-  view.setUint32(8, 0x57415645, false) // "WAVE"
+  view.setUint32(8, 0x57_41_56_45, false) // "WAVE"
 
   // "fmt " sub-chunk
-  view.setUint32(12, 0x666d7420, false) // "fmt "
+  view.setUint32(12, 0x66_6d_74_20, false) // "fmt "
   view.setUint32(16, 16, true) // Subchunk1 size
   view.setUint16(20, 1, true) // Audio format (1 = PCM)
   view.setUint16(22, numChannels, true) // Number of channels
@@ -57,7 +57,7 @@ function createWavHeader(
   view.setUint16(34, 16, true) // Bits per sample (16-bit)
 
   // "data" sub-chunk
-  view.setUint32(36, 0x64617461, false) // "data"
+  view.setUint32(36, 0x64_61_74_61, false) // "data"
   view.setUint32(40, dataLength, true) // Data size
 
   return new Uint8Array(header)

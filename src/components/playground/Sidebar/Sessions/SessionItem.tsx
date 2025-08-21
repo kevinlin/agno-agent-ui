@@ -1,15 +1,15 @@
 import { useQueryState } from 'nuqs'
-import { SessionEntry } from '@/types/playground'
-import { Button } from '../../../ui/button'
-import useSessionLoader from '@/hooks/useSessionLoader'
-import { deletePlaygroundSessionAPI } from '@/api/playground'
-import { usePlaygroundStore } from '@/store'
-import { toast } from 'sonner'
-import Icon from '@/components/ui/icon'
 import { useState } from 'react'
-import DeleteSessionModal from './DeleteSessionModal'
+import { toast } from 'sonner'
+import { deletePlaygroundSessionAPI } from '@/api/playground'
+import Icon from '@/components/ui/icon'
 import useChatActions from '@/hooks/useChatActions'
-import { truncateText, cn } from '@/lib/utils'
+import useSessionLoader from '@/hooks/useSessionLoader'
+import { cn, truncateText } from '@/lib/utils'
+import { usePlaygroundStore } from '@/store'
+import type { SessionEntry } from '@/types/playground'
+import { Button } from '../../../ui/button'
+import DeleteSessionModal from './DeleteSessionModal'
 
 type SessionItemProps = SessionEntry & {
   isSelected: boolean
@@ -74,28 +74,28 @@ const SessionItem = ({
       >
         <div className="flex flex-col gap-1">
           <h4
-            className={cn('text-sm font-medium', isSelected && 'text-primary')}
+            className={cn('font-medium text-sm', isSelected && 'text-primary')}
           >
             {truncateText(title, 20)}
           </h4>
         </div>
         <Button
-          variant="ghost"
-          size="icon"
           className="transform opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100"
           onClick={(e) => {
             e.stopPropagation()
             setIsDeleteModalOpen(true)
           }}
+          size="icon"
+          variant="ghost"
         >
-          <Icon type="trash" size="xs" />
+          <Icon size="xs" type="trash" />
         </Button>
       </div>
       <DeleteSessionModal
+        isDeleting={false}
         isOpen={isDeleteModalOpen}
         onClose={() => setIsDeleteModalOpen(false)}
         onDelete={handleDeleteSession}
-        isDeleting={false}
       />
     </>
   )

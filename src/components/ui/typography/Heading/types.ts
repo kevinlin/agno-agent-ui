@@ -1,6 +1,6 @@
-import { type ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
-import { type IconType } from '@/components/ui/icon'
+import type { IconType } from '@/components/ui/icon'
 
 type HeadingSize = 1 | 2 | 3 | 4 | 5 | 6
 

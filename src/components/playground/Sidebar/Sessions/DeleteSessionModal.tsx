@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import type { FC } from 'react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -23,7 +23,7 @@ const DeleteSessionModal: FC<DeleteSessionModalProps> = ({
   onDelete,
   isDeleting
 }) => (
-  <Dialog open={isOpen} onOpenChange={onClose}>
+  <Dialog onOpenChange={onClose} open={isOpen}>
     <DialogContent className="font-geist">
       <DialogHeader>
         <DialogTitle>Confirm deletion</DialogTitle>
@@ -34,18 +34,18 @@ const DeleteSessionModal: FC<DeleteSessionModalProps> = ({
       </DialogHeader>
       <DialogFooter>
         <Button
-          variant="outline"
           className="rounded-xl border-border font-geist"
-          onClick={onClose}
           disabled={isDeleting}
+          onClick={onClose}
+          variant="outline"
         >
           CANCEL
         </Button>
         <Button
-          variant="destructive"
-          onClick={onDelete}
-          disabled={isDeleting}
           className="rounded-xl font-geist"
+          disabled={isDeleting}
+          onClick={onDelete}
+          variant="destructive"
         >
           DELETE
         </Button>

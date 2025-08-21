@@ -1,37 +1,34 @@
 'use client'
 
-import { FC, useState } from 'react'
-
 import Image from 'next/image'
 import Link from 'next/link'
+import { type FC, useState } from 'react'
 import { cn } from '@/lib/utils'
-
-import type {
-  UnorderedListProps,
-  OrderedListProps,
-  EmphasizedTextProps,
-  ItalicTextProps,
-  StrongTextProps,
-  BoldTextProps,
-  DeletedTextProps,
-  UnderlinedTextProps,
-  HorizontalRuleProps,
-  BlockquoteProps,
-  AnchorLinkProps,
-  HeadingProps,
-  ImgProps,
-  ParagraphProps,
-  TableHeaderCellProps,
-  TableProps,
-  TableHeaderProps,
-  TableBodyProps,
-  TableRowProps,
-  TableCellProps,
-  PreparedTextProps
-} from './types'
-
 import { HEADING_SIZES } from '../Heading/constants'
 import { PARAGRAPH_SIZES } from '../Paragraph/constants'
+import type {
+  AnchorLinkProps,
+  BlockquoteProps,
+  BoldTextProps,
+  DeletedTextProps,
+  EmphasizedTextProps,
+  HeadingProps,
+  HorizontalRuleProps,
+  ImgProps,
+  ItalicTextProps,
+  OrderedListProps,
+  ParagraphProps,
+  PreparedTextProps,
+  StrongTextProps,
+  TableBodyProps,
+  TableCellProps,
+  TableHeaderCellProps,
+  TableHeaderProps,
+  TableProps,
+  TableRowProps,
+  UnderlinedTextProps,
+  UnorderedListProps
+} from './types'
 
 const filterProps = (props: object) => {
   const newProps = { ...props }
@@ -71,7 +68,7 @@ const Paragraph = ({ className, ...props }: ParagraphProps) => (
 
 const EmphasizedText = ({ className, ...props }: EmphasizedTextProps) => (
   <em
-    className={cn(className, 'text-sm font-semibold')}
+    className={cn(className, 'font-semibold text-sm')}
     {...filterProps(props)}
   />
 )
@@ -85,14 +82,14 @@ const ItalicText = ({ className, ...props }: ItalicTextProps) => (
 
 const StrongText = ({ className, ...props }: StrongTextProps) => (
   <strong
-    className={cn(className, 'text-sm font-semibold')}
+    className={cn(className, 'font-semibold text-sm')}
     {...filterProps(props)}
   />
 )
 
 const BoldText = ({ className, ...props }: BoldTextProps) => (
   <b
-    className={cn(className, 'text-sm font-semibold')}
+    className={cn(className, 'font-semibold text-sm')}
     {...filterProps(props)}
   />
 )
@@ -113,7 +110,7 @@ const DeletedText = ({ className, ...props }: DeletedTextProps) => (
 
 const HorizontalRule = ({ className, ...props }: HorizontalRuleProps) => (
   <hr
-    className={cn(className, 'mx-auto w-48 border-b border-border')}
+    className={cn(className, 'mx-auto w-48 border-border border-b')}
     {...filterProps(props)}
   />
 )
@@ -136,8 +133,8 @@ const Blockquote = ({ className, ...props }: BlockquoteProps) => (
 const AnchorLink = ({ className, ...props }: AnchorLinkProps) => (
   <a
     className={cn(className, 'cursor-pointer text-xs underline')}
-    target="_blank"
     rel="noopener noreferrer"
+    target="_blank"
     {...filterProps(props)}
   />
 )
@@ -183,22 +180,22 @@ const Img = ({ src, alt }: ImgProps) => {
         <div className="flex h-40 flex-col items-center justify-center gap-2 rounded-md bg-secondary/50 text-muted">
           <Paragraph className="text-primary">Image unavailable</Paragraph>
           <Link
+            className="max-w-md truncate underline"
             href={src}
             target="_blank"
-            className="max-w-md truncate underline"
           >
             {src}
           </Link>
         </div>
       ) : (
         <Image
-          src={src}
-          width={1280}
-          height={720}
           alt={alt ?? 'Rendered image'}
           className="size-full rounded-md object-cover"
+          height={720}
           onError={() => setError(true)}
+          src={src}
           unoptimized
+          width={1280}
         />
       )}
     </div>
@@ -217,7 +214,7 @@ const TableHead = ({ className, ...props }: TableHeaderProps) => (
   <thead
     className={cn(
       className,
-      'rounded-md border-b border-border bg-transparent p-2 text-left text-sm font-[600]'
+      'rounded-md border-border border-b bg-transparent p-2 text-left font-[600] text-sm'
     )}
     {...filterProps(props)}
   />
@@ -225,7 +222,7 @@ const TableHead = ({ className, ...props }: TableHeaderProps) => (
 
 const TableHeadCell = ({ className, ...props }: TableHeaderCellProps) => (
   <th
-    className={cn(className, 'p-2 text-sm font-[600]')}
+    className={cn(className, 'p-2 font-[600] text-sm')}
     {...filterProps(props)}
   />
 )
@@ -236,7 +233,7 @@ const TableBody = ({ className, ...props }: TableBodyProps) => (
 
 const TableRow = ({ className, ...props }: TableRowProps) => (
   <tr
-    className={cn(className, 'border-b border-border last:border-b-0')}
+    className={cn(className, 'border-border border-b last:border-b-0')}
     {...filterProps(props)}
   />
 )

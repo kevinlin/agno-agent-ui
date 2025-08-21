@@ -1,15 +1,12 @@
-import { useCallback } from 'react'
-
-import { APIRoutes } from '@/api/routes'
-
-import useChatActions from '@/hooks/useChatActions'
-import { usePlaygroundStore } from '../store'
-import { RunEvent, type RunResponse } from '@/types/playground'
-import { constructEndpointUrl } from '@/lib/constructEndpointUrl'
-import useAIResponseStream from './useAIResponseStream'
-import { ToolCall } from '@/types/playground'
 import { useQueryState } from 'nuqs'
+import { useCallback } from 'react'
+import { APIRoutes } from '@/api/routes'
+import useChatActions from '@/hooks/useChatActions'
+import { constructEndpointUrl } from '@/lib/constructEndpointUrl'
 import { getJsonMarkdown } from '@/lib/utils'
+import { RunEvent, type RunResponse, type ToolCall } from '@/types/playground'
+import { usePlaygroundStore } from '../store'
+import useAIResponseStream from './useAIResponseStream'
 
 /**
  * useAIChatStreamHandler is responsible for making API calls and handling the stream response.

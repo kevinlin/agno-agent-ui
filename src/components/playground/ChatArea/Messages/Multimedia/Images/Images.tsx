@@ -1,7 +1,6 @@
 import { memo } from 'react'
-
-import { type ImageData } from '@/types/playground'
 import { cn } from '@/lib/utils'
+import type { ImageData } from '@/types/playground'
 
 const Images = ({ images }: { images: ImageData[] }) => (
   <div
@@ -11,10 +10,9 @@ const Images = ({ images }: { images: ImageData[] }) => (
     )}
   >
     {images.map((image) => (
-      <div key={image.url} className="group relative">
+      <div className="group relative" key={image.url}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={image.url}
           alt={image.revised_prompt || 'AI generated image'}
           className="w-full rounded-lg"
           onError={(e) => {
@@ -30,6 +28,7 @@ const Images = ({ images }: { images: ImageData[] }) => (
                   `
             }
           }}
+          src={image.url}
         />
       </div>
     ))}
