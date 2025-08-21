@@ -31,7 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${dmMono.variable} antialiased`}>
+      <body 
+        className={`${geistSans.variable} ${dmMono.variable} antialiased`}
+        suppressHydrationWarning
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -41,7 +44,6 @@ export default function RootLayout({
           <NuqsAdapter>{children}</NuqsAdapter>
           <Toaster />
         </ThemeProvider>
-
       </body>
     </html>
   )

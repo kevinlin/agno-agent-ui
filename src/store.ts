@@ -109,13 +109,29 @@ export const usePlaygroundStore = create<PlaygroundStore>()(
     }),
     {
       name: 'endpoint-storage',
-      storage: createJSONStorage(() => localStorage),
+      storage: createJSONStorage(() => {
+        // Ensure localStorage is available (client-side only)
+        if (typeof window !== 'undefined') {
+          return localStorage
+        }
+        // Return a mock storage for SSR
+        return {
+          getItem: () => null,
+          setItem: () => {},
+          removeItem: () => {}
+        }
+      }),
       partialize: (state) => ({
         selectedEndpoint: state.selectedEndpoint
       }),
       onRehydrateStorage: () => (state) => {
-        state?.setHydrated?.()
-      }
+        // Only set hydrated if we're on the client side
+        if (typeof window !== 'undefined') {
+          state?.setHydrated?.()
+        }
+      },
+      // Skip hydration during SSR
+      skipHydration: typeof window === 'undefined'
     }
   )
 )
